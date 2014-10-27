@@ -1,0 +1,1 @@
+<span title="<?php echo ThemexUser::$data['active_user']['status']['name']; ?>" class="profile-status <?php echo ThemexUser::$data['active_user']['status']['value']; ?>"></span>

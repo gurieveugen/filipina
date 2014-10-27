@@ -1,0 +1,3137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LoveStory v1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-05-11 20:18+0200\n"
+"PO-Revision-Date: 2014-05-11 20:18+0200\n"
+"Last-Translator: \n"
+"Language-Team: Themex\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+# @ lovestory
+#: ../author.php:22 ../template-profile.php:30
+#: ../framework/classes/themex.user.php:1779
+msgid "Gender"
+msgstr ""
+
+# @ lovestory
+#: ../author.php:28 ../template-profile.php:47
+#: ../framework/classes/themex.user.php:1789
+msgid "Seeking"
+msgstr ""
+
+# @ lovestory
+#: ../author.php:35 ../template-profile.php:66
+#: ../framework/classes/themex.user.php:1801
+msgid "Age"
+msgstr ""
+
+# @ lovestory
+#: ../author.php:42 ../module-search-form.php:51 ../template-profile.php:84
+#: ../framework/classes/themex.user.php:1812
+msgid "Country"
+msgstr ""
+
+# @ lovestory
+#: ../author.php:48 ../module-search-form.php:69 ../template-profile.php:101
+#: ../framework/classes/themex.user.php:1822
+msgid "City"
+msgstr ""
+
+# @ lovestory
+#: ../comments.php:4
+msgid "Comments"
+msgstr ""
+
+# @ lovestory
+#: ../content-comment.php:14
+msgid "Reply"
+msgstr ""
+
+# @ lovestory
+#: ../content-profile-grid.php:15 ../content-profile-grid.php:18
+#: ../module-favorites.php:33
+msgid "Remove from Favorites"
+msgstr ""
+
+# @ lovestory
+#: ../content-profile-grid.php:15 ../content-profile-grid.php:18
+msgid "Add to Favorites"
+msgstr ""
+
+# @ lovestory
+#: ../content-profile-grid.php:28 ../template-gifts.php:33
+msgid "Send Gift"
+msgstr ""
+
+# @ lovestory
+#: ../content-profile-grid.php:32 ../template-message.php:41
+msgid "Send Message"
+msgstr ""
+
+# @ lovestory
+#: ../content-profile-grid.php:36 ../template-memberships.php:19
+msgid "Live Chat"
+msgstr ""
+
+# @ lovestory
+#: ../content-profile-grid.php:42
+msgid "You must be signed in to do that"
+msgstr ""
+
+# @ lovestory
+#: ../content-profile-grid.php:48
+msgid "Live chat is disabled in your membership"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:26
+msgid "Sign Out"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:27 ../sidebar-profile-left.php:17 ../template-profile.php:5
+msgid "My Profile"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:29 ../header.php:59 ../template-register.php:53
+#: ../template-register.php:64
+msgid "Sign In"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:31 ../template-register.php:10 ../template-register.php:42
+#: ../woocommerce/myaccount/form-login.php:42
+#: ../woocommerce/myaccount/form-login.php:66
+msgid "Register"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:54 ../template-register.php:16 ../template-register.php:59
+#: ../woocommerce/myaccount/form-login.php:46
+msgid "Username"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:57 ../template-register.php:27 ../template-register.php:62
+#: ../woocommerce/myaccount/form-login.php:20
+#: ../woocommerce/myaccount/form-login.php:56
+msgid "Password"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:61 ../template-register.php:66
+msgid "Sign in with Facebook"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:65 ../framework/classes/themex.user.php:594
+msgid "Password Recovery"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:77 ../template-register.php:21
+#: ../framework/classes/themex.interface.php:753
+#: ../woocommerce/myaccount/form-login.php:52
+msgid "Email"
+msgstr ""
+
+# @ lovestory
+#: ../header.php:79 ../woocommerce/myaccount/form-lost-password.php:28
+msgid "Reset Password"
+msgstr ""
+
+# @ lovestory
+#: ../module-favorites.php:3 ../template-settings.php:26
+#: ../template-settings.php:47 ../template-settings.php:69
+#: ../framework/config.php:1897 ../framework/config.php:1908
+#: ../framework/config.php:1919
+msgid "Favorites"
+msgstr ""
+
+# @ lovestory
+#: ../module-favorites.php:7
+msgid "No favorites added yet."
+msgstr ""
+
+# @ lovestory
+#: ../module-gifts.php:3 ../template-settings.php:93
+#: ../framework/config.php:326 ../framework/config.php:489
+msgid "Gifts"
+msgstr ""
+
+# @ lovestory
+#: ../module-gifts.php:7
+msgid "No gifts received yet."
+msgstr ""
+
+# @ lovestory
+#: ../module-photos.php:3 ../framework/config.php:482
+msgid "Photos"
+msgstr ""
+
+# @ lovestory
+#: ../module-photos.php:7
+msgid "Upload New Photo"
+msgstr ""
+
+# @ lovestory
+#: ../module-photos.php:14
+msgid "You have exceeded the number of photos"
+msgstr ""
+
+# @ lovestory
+#: ../module-photos.php:23
+msgid "No photos uploaded yet."
+msgstr ""
+
+# @ lovestory
+#: ../module-photos.php:44
+msgid "Sign in to view full size photos"
+msgstr ""
+
+# @ lovestory
+#: ../module-photos.php:54 ../module-photos.php:57
+msgid "Unfeature Photo"
+msgstr ""
+
+# @ lovestory
+#: ../module-photos.php:54 ../module-photos.php:57
+msgid "Feature Photo"
+msgstr ""
+
+# @ lovestory
+#: ../module-photos.php:67
+msgid "Remove Photo"
+msgstr ""
+
+# @ lovestory
+#: ../module-search-bar.php:3
+msgid "Hello, I am a"
+msgstr ""
+
+# @ lovestory
+#: ../module-search-bar.php:23
+msgid "seeking a"
+msgstr ""
+
+# @ lovestory
+#: ../module-search-bar.php:44 ../framework/classes/themex.user.php:809
+msgid "from"
+msgstr ""
+
+# @ lovestory
+#: ../module-search-bar.php:58
+msgid "to"
+msgstr ""
+
+# @ lovestory
+#: ../module-search-bar.php:74 ../module-search-form.php:135
+msgid "Find My Matches"
+msgstr ""
+
+# @ lovestory
+#: ../module-search-form.php:10
+msgid "I am a"
+msgstr ""
+
+# @ lovestory
+#: ../module-search-form.php:31
+msgid "Seeking a"
+msgstr ""
+
+# @ lovestory
+#: ../module-search-form.php:91
+msgid "From"
+msgstr ""
+
+# @ lovestory
+#: ../module-search-form.php:107
+msgid "To"
+msgstr ""
+
+# @ lovestory
+#: ../searchform.php:3
+msgid "Search"
+msgstr ""
+
+# @ lovestory
+#: ../sidebar-profile-left.php:8
+msgid "Change Photo"
+msgstr ""
+
+# @ lovestory
+#: ../sidebar-profile-left.php:19 ../template-memberships.php:5
+msgid "My Membership"
+msgstr ""
+
+# @ lovestory
+#: ../sidebar-profile-left.php:21 ../template-settings.php:5
+msgid "My Settings"
+msgstr ""
+
+# @ lovestory
+#: ../sidebar-profile-left.php:24 ../template-messages.php:5
+msgid "My Messages"
+msgstr ""
+
+#: ../template-chat.php:8 ../template-message.php:8
+msgid "Unignore User"
+msgstr ""
+
+#: ../template-chat.php:11 ../template-message.php:11
+msgid "Ignore User"
+msgstr ""
+
+#: ../template-chat.php:25 ../framework/classes/themex.user.php:1586
+msgid "You've been added to the ignore list"
+msgstr ""
+
+# @ lovestory
+#: ../template-chat.php:43
+msgid "Send"
+msgstr ""
+
+# @ lovestory
+#: ../template-gifts.php:43
+msgid "No gifts available yet."
+msgstr ""
+
+# @ lovestory
+#: ../template-memberships.php:10 ../framework/config.php:302
+#: ../framework/config.php:1788
+msgid "Membership"
+msgstr ""
+
+# @ lovestory
+#: ../template-memberships.php:14
+msgid "Expiration Date"
+msgstr ""
+
+# @ lovestory
+#: ../template-memberships.php:20 ../framework/config.php:500
+#: ../framework/config.php:1815
+msgid "Enabled"
+msgstr ""
+
+# @ lovestory
+#: ../template-memberships.php:20 ../framework/config.php:501
+#: ../framework/config.php:1816
+msgid "Disabled"
+msgstr ""
+
+# @ lovestory
+#: ../template-memberships.php:24
+msgid "Messages to Send"
+msgstr ""
+
+# @ lovestory
+#: ../template-memberships.php:28
+msgid "Photos to Upload"
+msgstr ""
+
+# @ lovestory
+#: ../template-memberships.php:33
+msgid "Gifts to Send"
+msgstr ""
+
+# @ lovestory
+#: ../template-memberships.php:67
+msgid "Sign Up Now"
+msgstr ""
+
+# @ lovestory
+#: ../template-messages.php:30
+msgid "No messages received yet."
+msgstr ""
+
+# @ lovestory
+#: ../template-posts.php:28
+msgid "No posts found. Try a different search?"
+msgstr ""
+
+# @ lovestory
+#: ../template-posts.php:29
+msgid "Sorry, no posts matched your search. Try again with different keywords."
+msgstr ""
+
+# @ lovestory
+#: ../template-profile.php:12
+msgid "First Name"
+msgstr ""
+
+# @ lovestory
+#: ../template-profile.php:20
+msgid "Last Name"
+msgstr ""
+
+# @ lovestory
+#: ../template-profile.php:123 ../template-settings.php:120
+#: ../framework/templates/index.php:5 ../framework/templates/index.php:19
+msgid "Save Changes"
+msgstr ""
+
+# @ lovestory
+#: ../template-profiles.php:35
+msgid "No profiles found. Try a different search?"
+msgstr ""
+
+# @ lovestory
+#: ../template-profiles.php:36
+msgid ""
+"Sorry, no profiles matched your search. Try again with different parameters."
+msgstr ""
+
+# @ lovestory
+#: ../template-register.php:32
+msgid "Repeat Password"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:14
+msgid "Favorites are Visible to"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:25 ../template-settings.php:46
+#: ../template-settings.php:68 ../framework/config.php:1896
+#: ../framework/config.php:1907 ../framework/config.php:1918
+msgid "Everybody"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:27 ../template-settings.php:48
+#: ../template-settings.php:70 ../framework/config.php:1898
+#: ../framework/config.php:1909 ../framework/config.php:1920
+msgid "Nobody"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:35
+msgid "Photos are Visible to"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:57
+msgid "Gifts are Visible to"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:80
+msgid "Email Notifications"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:91
+msgid "Messages and Gifts"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:92 ../framework/config.php:48
+#: ../framework/config.php:69 ../framework/config.php:475
+msgid "Messages"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:94 ../framework/classes/themex.interface.php:598
+msgid "None"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:103
+msgid "New Password"
+msgstr ""
+
+# @ lovestory
+#: ../template-settings.php:111
+msgid "Repeat New Password"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:39 ../framework/config.php:1738
+msgid "Registration"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:58 ../framework/config.php:496
+msgid "Chat"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:79 ../framework/config.php:301
+msgid "Memberships"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:89
+msgid "Settings"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:103
+msgid "Inactive"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:112
+msgid "Main Menu"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:117
+msgid "Footer Menu"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:148
+msgid "Bordered List"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:149
+msgid "Checked List"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:280 ../framework/classes/themex.interface.php:864
+msgid "Profile"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:303 ../framework/config.php:328
+#: ../framework/config.php:352 ../framework/config.php:377
+msgid "Add New"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:304
+msgid "Add New Membership"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:305
+msgid "Edit Membership"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:306
+msgid "New Membership"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:307
+msgid "View Membership"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:308
+msgid "Search Memberships"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:309
+msgid "No Memberships Found"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:310
+msgid "No Memberships Found in Trash"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:319
+msgid "membership"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:327
+msgid "Gift"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:329
+msgid "Add New Gift"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:330
+msgid "Edit Gift"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:331 ../framework/classes/themex.user.php:1018
+msgid "New Gift"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:332
+msgid "View Gift"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:333
+msgid "Search Gifts"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:334
+msgid "No Gifts Found"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:335
+msgid "No Gifts Found in Trash"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:343
+msgid "gift"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:350 ../framework/config.php:638
+msgid "Stories"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:351
+msgid "Story"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:353
+msgid "Add New Story"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:354
+msgid "Edit Story"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:355
+msgid "New Story"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:356
+msgid "View Story"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:357
+msgid "Search Stories"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:358
+msgid "No Stories Found"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:359
+msgid "No Stories Found in Trash"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:368
+msgid "story"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:375
+msgid "Slides"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:376
+msgid "Slide"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:378
+msgid "Add New Slide"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:379
+msgid "Edit Slide"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:380
+msgid "New Slide"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:381
+msgid "View Slide"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:382
+msgid "Search Slides"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:383
+msgid "No Slides Found"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:384
+msgid "No Slides Found in Trash"
+msgstr ""
+
+#: ../framework/config.php:407
+msgid "Story Categories"
+msgstr ""
+
+#: ../framework/config.php:408
+msgid "Story Category"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:409 ../framework/classes/themex.sidebar.php:215
+msgid "Categories"
+msgstr ""
+
+#: ../framework/config.php:410
+msgid "Search Story Categories"
+msgstr ""
+
+#: ../framework/config.php:411
+msgid "All Story Categories"
+msgstr ""
+
+#: ../framework/config.php:412 ../framework/config.php:413
+msgid "Parent Story Category"
+msgstr ""
+
+#: ../framework/config.php:414
+msgid "Edit Story Category"
+msgstr ""
+
+#: ../framework/config.php:415
+msgid "Update Story Category"
+msgstr ""
+
+#: ../framework/config.php:416
+msgid "Add New Story Category"
+msgstr ""
+
+#: ../framework/config.php:417
+msgid "New Story Category Name"
+msgstr ""
+
+#: ../framework/config.php:420
+msgid "stories"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:433
+msgid "Story Options"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:439
+msgid "Caption"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:449
+msgid "Membership Options"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:455 ../woocommerce/checkout/review-order.php:10
+msgid "Product"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:462
+msgid "Period"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:466
+msgid "Week"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:467
+msgid "Month"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:468
+msgid "3 Months"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:469
+msgid "6 Months"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:470
+msgid "Year"
+msgstr ""
+
+#: ../framework/config.php:506
+msgid "Users"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:520
+msgid "Button"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:525
+msgid "Button Color"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:528
+msgid "Primary"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:529
+msgid "Secondary"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:535
+msgid "Button Size"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:538
+msgid "Small"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:539
+msgid "Medium"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:540
+msgid "Large"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:546
+msgid "Button Link"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:552
+msgid "Button Target"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:555
+#: ../framework/classes/widgets/themex.advert.php:66
+msgid "Current Tab"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:556
+#: ../framework/classes/widgets/themex.advert.php:67
+msgid "New Tab"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:562
+msgid "Button Text"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:571
+msgid "Columns"
+msgstr ""
+
+#: ../framework/config.php:578
+msgid "Width"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:581
+msgid "One Sixth"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:582
+msgid "One Sixth Last"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:583
+msgid "One Fourth"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:584
+msgid "One Fourth Last"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:585
+msgid "One Third"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:586
+msgid "One Third Last"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:587
+msgid "Five Twelfths"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:588
+msgid "Five Twelfths Last"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:589
+msgid "One Half"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:590
+msgid "One Half Last"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:591
+msgid "Seven Twelfths"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:592
+msgid "Seven Twelfths Last"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:593
+msgid "Two Thirds"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:594
+msgid "Two Thirds Last"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:595
+msgid "Three Fourths"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:596
+msgid "Three Fourths Last"
+msgstr ""
+
+#: ../framework/config.php:602 ../framework/config.php:679
+#: ../framework/config.php:729
+msgid "Content"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:612 ../framework/config.php:1933
+msgid "Profiles"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:617
+msgid "Profiles Number"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:624 ../framework/config.php:1938
+msgid "Profiles Order"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:627 ../framework/config.php:653
+#: ../framework/config.php:1942
+msgid "Date"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:628 ../framework/config.php:1943
+#: ../framework/classes/themex.form.php:201
+#: ../framework/classes/themex.interface.php:752
+#: ../framework/classes/themex.sidebar.php:88
+msgid "Name"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:629 ../framework/config.php:1944
+msgid "Status"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:643
+msgid "Stories Number"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:650
+msgid "Stories Order"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:654
+msgid "Random"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:663
+msgid "Tabs"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:673 ../framework/config.php:689
+#: ../framework/config.php:723
+#: ../framework/classes/widgets/themex.search.php:48
+msgid "Title"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:694
+msgid "Title Text"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:700
+msgid "Title Align"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:703
+msgid "Left"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:704
+msgid "Center"
+msgstr ""
+
+#: ../framework/config.php:713
+msgid "Toggles"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1368
+msgid "Afghanistan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1369
+msgid "Albania"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1370
+msgid "Algeria"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1371
+msgid "American Samoa"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1372
+msgid "Andorra"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1373
+msgid "Angola"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1374
+msgid "Anguilla"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1375
+msgid "Antarctica"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1376
+msgid "Antigua And Barbuda"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1377
+msgid "Argentina"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1378
+msgid "Armenia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1379
+msgid "Aruba"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1380
+msgid "Australia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1381
+msgid "Austria"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1382
+msgid "Azerbaijan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1383
+msgid "Bahamas"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1384
+msgid "Bahrain"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1385
+msgid "Bangladesh"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1386
+msgid "Barbados"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1387
+msgid "Belarus"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1388
+msgid "Belgium"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1389
+msgid "Belize"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1390
+msgid "Benin"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1391
+msgid "Bermuda"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1392
+msgid "Bhutan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1393
+msgid "Bolivia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1394
+msgid "Bosnia And Herzegovina"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1395
+msgid "Botswana"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1396
+msgid "Bouvet Island"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1397
+msgid "Brazil"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1398
+msgid "British Indian Ocean Territory"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1399
+msgid "Brunei"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1400
+msgid "Bulgaria"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1401
+msgid "Burkina Faso"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1402
+msgid "Burundi"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1403
+msgid "Cambodia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1404
+msgid "Cameroon"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1405
+msgid "Canada"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1406
+msgid "Cape Verde"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1407
+msgid "Cayman Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1408
+msgid "Central African Republic"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1409
+msgid "Chad"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1410
+msgid "Chile"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1411
+msgid "China"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1412
+msgid "Christmas Island"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1413
+msgid "Cocos (Keeling) Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1414
+msgid "Columbia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1415
+msgid "Comoros"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1416
+msgid "Congo"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1417
+msgid "Cook Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1418
+msgid "Costa Rica"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1419
+msgid "Cote D'Ivorie (Ivory Coast)"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1420
+msgid "Croatia (Hrvatska)"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1421
+msgid "Cuba"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1422
+msgid "Cyprus"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1423
+msgid "Czech Republic"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1424
+msgid "Democratic Republic Of Congo (Zaire)"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1425
+msgid "Denmark"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1426
+msgid "Djibouti"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1427
+msgid "Dominica"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1428
+msgid "Dominican Republic"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1429
+msgid "East Timor"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1430
+msgid "Ecuador"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1431
+msgid "Egypt"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1432
+msgid "El Salvador"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1433
+msgid "Equatorial Guinea"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1434
+msgid "Eritrea"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1435
+msgid "Estonia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1436
+msgid "Ethiopia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1437
+msgid "Falkland Islands (Malvinas)"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1438
+msgid "Faroe Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1439
+msgid "Fiji"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1440
+msgid "Finland"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1441
+msgid "France"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1442
+msgid "France, Metropolitan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1443
+msgid "French Guinea"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1444
+msgid "French Polynesia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1445
+msgid "French Southern Territories"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1446
+msgid "Gabon"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1447
+msgid "Gambia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1448
+msgid "Georgia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1449
+msgid "Germany"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1450
+msgid "Ghana"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1451
+msgid "Gibraltar"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1452
+msgid "Greece"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1453
+msgid "Greenland"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1454
+msgid "Grenada"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1455
+msgid "Guadeloupe"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1456
+msgid "Guam"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1457
+msgid "Guatemala"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1458
+msgid "Guinea"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1459
+msgid "Guinea-Bissau"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1460
+msgid "Guyana"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1461
+msgid "Haiti"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1462
+msgid "Heard And McDonald Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1463
+msgid "Honduras"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1464
+msgid "Hong Kong"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1465
+msgid "Hungary"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1466
+msgid "Iceland"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1467
+msgid "India"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1468
+msgid "Indonesia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1469
+msgid "Iran"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1470
+msgid "Iraq"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1471
+msgid "Ireland"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1472
+msgid "Israel"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1473
+msgid "Italy"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1474
+msgid "Jamaica"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1475
+msgid "Japan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1476
+msgid "Jordan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1477
+msgid "Kazakhstan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1478
+msgid "Kenya"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1479
+msgid "Kiribati"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1480
+msgid "Kuwait"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1481
+msgid "Kyrgyzstan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1482
+msgid "Laos"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1483
+msgid "Latvia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1484
+msgid "Lebanon"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1485
+msgid "Lesotho"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1486
+msgid "Liberia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1487
+msgid "Libya"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1488
+msgid "Liechtenstein"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1489
+msgid "Lithuania"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1490
+msgid "Luxembourg"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1491
+msgid "Macau"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1492
+msgid "Macedonia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1493
+msgid "Madagascar"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1494
+msgid "Malawi"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1495
+msgid "Malaysia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1496
+msgid "Maldives"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1497
+msgid "Mali"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1498
+msgid "Malta"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1499
+msgid "Marshall Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1500
+msgid "Martinique"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1501
+msgid "Mauritania"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1502
+msgid "Mauritius"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1503
+msgid "Mayotte"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1504
+msgid "Mexico"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1505
+msgid "Micronesia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1506
+msgid "Moldova"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1507
+msgid "Monaco"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1508
+msgid "Mongolia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1509
+msgid "Montserrat"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1510
+msgid "Morocco"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1511
+msgid "Mozambique"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1512
+msgid "Myanmar (Burma)"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1513
+msgid "Namibia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1514
+msgid "Nauru"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1515
+msgid "Nepal"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1516
+msgid "Netherlands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1517
+msgid "Netherlands Antilles"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1518
+msgid "New Caledonia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1519
+msgid "New Zealand"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1520
+msgid "Nicaragua"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1521
+msgid "Niger"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1522
+msgid "Nigeria"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1523
+msgid "Niue"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1524
+msgid "Norfolk Island"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1525
+msgid "North Korea"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1526
+msgid "Northern Mariana Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1527
+msgid "Norway"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1528
+msgid "Oman"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1529
+msgid "Pakistan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1530
+msgid "Palau"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1531
+msgid "Panama"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1532
+msgid "Papua New Guinea"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1533
+msgid "Paraguay"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1534
+msgid "Peru"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1535
+msgid "Philippines"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1536
+msgid "Pitcairn"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1537
+msgid "Poland"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1538
+msgid "Portugal"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1539
+msgid "Puerto Rico"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1540
+msgid "Qatar"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1541
+msgid "Reunion"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1542
+msgid "Romania"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1543
+msgid "Russia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1544
+msgid "Rwanda"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1545
+msgid "Saint Helena"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1546
+msgid "Saint Kitts And Nevis"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1547
+msgid "Saint Lucia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1548
+msgid "Saint Pierre And Miquelon"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1549
+msgid "Saint Vincent And The Grenadines"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1550
+msgid "San Marino"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1551
+msgid "Sao Tome And Principe"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1552
+msgid "Saudi Arabia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1553
+msgid "Senegal"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1554
+msgid "Seychelles"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1555
+msgid "Sierra Leone"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1556
+msgid "Singapore"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1557
+msgid "Slovak Republic"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1558
+msgid "Slovenia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1559
+msgid "Solomon Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1560
+msgid "Somalia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1561
+msgid "South Africa"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1562
+msgid "South Georgia And South Sandwich Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1563
+msgid "South Korea"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1564
+msgid "Spain"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1565
+msgid "Sri Lanka"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1566
+msgid "Sudan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1567
+msgid "Suriname"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1568
+msgid "Svalbard And Jan Mayen"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1569
+msgid "Swaziland"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1570
+msgid "Sweden"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1571
+msgid "Switzerland"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1572
+msgid "Syria"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1573
+msgid "Taiwan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1574
+msgid "Tajikistan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1575
+msgid "Tanzania"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1576
+msgid "Thailand"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1577
+msgid "Togo"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1578
+msgid "Tokelau"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1579
+msgid "Tonga"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1580
+msgid "Trinidad And Tobago"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1581
+msgid "Tunisia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1582
+msgid "Turkey"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1583
+msgid "Turkmenistan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1584
+msgid "Turks And Caicos Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1585
+msgid "Tuvalu"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1586
+msgid "Uganda"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1587
+msgid "Ukraine"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1588
+msgid "United Arab Emirates"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1589
+msgid "United Kingdom"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1590
+msgid "United States"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1591
+msgid "United States Minor Outlying Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1592
+msgid "Uruguay"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1593
+msgid "Uzbekistan"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1594
+msgid "Vanuatu"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1595
+msgid "Vatican City (Holy See)"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1596
+msgid "Venezuela"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1597
+msgid "Vietnam"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1598
+msgid "Virgin Islands (British)"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1599
+msgid "Virgin Islands (US)"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1600
+msgid "Wallis And Futuna Islands"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1601
+msgid "Western Sahara"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1602
+msgid "Western Samoa"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1603
+msgid "Yemen"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1604
+msgid "Yugoslavia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1605
+msgid "Zambia"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1606
+msgid "Zimbabwe"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1611
+msgid "man"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1612
+msgid "woman"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1621
+msgid "General"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1626
+msgid "Site Favicon"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1627
+msgid "Upload an image for your site favicon"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1633
+msgid "Site Logo"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1634
+msgid "Upload an image for your site logo"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1640
+msgid "Copyright Text"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1641
+msgid "Add copyright text to be shown in the site footer"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1647
+msgid "Tracking Code"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1648
+msgid "Add Google Analytics code to track your site visitors"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1655
+msgid "Styling"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1660
+msgid "Primary Color"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1667
+msgid "Secondary Color"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1674
+msgid "Header Background"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1680
+msgid "Content Background"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1686
+msgid "Heading Font"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1693
+msgid "Content Font"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1700
+msgid "Custom CSS"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1701
+msgid "Add custom CSS rules to overwrite the default styles"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1707
+msgid "Header"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1711
+msgid "Hide Search Form"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1717
+msgid "Slider Pause"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1727
+msgid "Slider Speed"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1743
+msgid "Enable Email Activation"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1749
+msgid "Enable Captcha Protection"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1755
+msgid "Enable Facebook Login"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1761
+msgid "Facebook Application ID"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1767
+msgid "Facebook Application Secret"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1773
+msgid "Registration Email"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1775
+msgid ""
+"Use %username%, %password% and %link% keywords to show them in the email text"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1780
+msgid "Password Reset Email"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1782
+msgid "Use %username% and %link% keywords to show them in the email text"
+msgstr ""
+
+#: ../framework/config.php:1793
+msgid "Membership Type"
+msgstr ""
+
+#: ../framework/config.php:1797
+msgid "Enabled for All"
+msgstr ""
+
+#: ../framework/config.php:1798
+msgid "Disabled for Women"
+msgstr ""
+
+#: ../framework/config.php:1799
+msgid "Disabled for All"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1804
+msgid "Free Membership Duration"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1811
+msgid "Free Membership Chat"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1821
+msgid "Free Messages Number"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1828
+msgid "Free Photos Number"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1835
+msgid "Free Gifts Number"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1843
+msgid "Notifications"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1848
+msgid "Disable Notifications"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1854
+msgid "New Message Email"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1856 ../framework/config.php:1863
+msgid ""
+"Use %username%, %sender% and %link% keywords to show them in the email text"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1861
+msgid "New Gift Email"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1869
+msgid "Privacy"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1874
+msgid "Disable Chat"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1880
+msgid "Disable Gifts"
+msgstr ""
+
+#: ../framework/config.php:1886
+msgid "Disable Ignoring"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1892
+msgid "Favorites Visibility"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1903
+msgid "Photos Visibility"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1914
+msgid "Gifts Visibility"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1925
+msgid "Message Filters"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1928
+msgid ""
+"Enter a comma separated list of words which will be cut from the private "
+"messages"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1949
+msgid "Profiles Per Page"
+msgstr ""
+
+#: ../framework/config.php:1956
+msgid "Hide for Guests"
+msgstr ""
+
+#: ../framework/config.php:1962
+msgid "Hide Name"
+msgstr ""
+
+#: ../framework/config.php:1968
+msgid "Hide Gender"
+msgstr ""
+
+#: ../framework/config.php:1974
+msgid "Hide Age"
+msgstr ""
+
+#: ../framework/config.php:1980
+msgid "Hide Location"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1988
+msgid "Profile Fields"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1994
+msgid "Posts"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:1999
+msgid "Hide Post Date"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:2005
+msgid "Hide Post Author"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:2011
+msgid "Hide Featured Image"
+msgstr ""
+
+#: ../framework/config.php:2018
+msgid "Checkout"
+msgstr ""
+
+# @ lovestory
+#: ../framework/config.php:2029
+msgid "Sidebars"
+msgstr ""
+
+# @ lovestory
+#: ../framework/functions.php:34
+msgid "Read More"
+msgstr ""
+
+# @ lovestory
+#: ../framework/functions.php:150
+msgid "week"
+msgstr ""
+
+# @ lovestory
+#: ../framework/functions.php:154
+msgid "month"
+msgstr ""
+
+# @ lovestory
+#: ../framework/functions.php:158
+msgid "year"
+msgstr ""
+
+# @ lovestory
+#: ../framework/functions.php:162
+msgid "months"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.core.php:260
+msgid "All changes have been saved"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.core.php:289
+msgid "All options have been reset"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.core.php:664
+msgid "Only JPG and PNG images are allowed."
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.core.php:686
+msgid "This image is too large for uploading."
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.form.php:210
+msgid "String"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.form.php:211
+msgid "Number"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.form.php:212
+msgid "Text"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.form.php:213
+msgid "Select"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.form.php:222
+msgid "Options"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.form.php:229
+msgid "Searchable"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.interface.php:92
+msgid "Insert This Item"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.interface.php:149
+#: ../framework/templates/index.php:4
+msgid "Theme Options"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.interface.php:384
+msgid "Browse"
+msgstr ""
+
+#: ../framework/classes/themex.interface.php:655
+#: ../framework/classes/themex.shortcode.php:147
+msgid "Add"
+msgstr ""
+
+#: ../framework/classes/themex.interface.php:666
+#: ../framework/classes/themex.shortcode.php:146
+msgid "Remove"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.interface.php:755
+msgid "Comment"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.interface.php:759
+msgid "Add Comment"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.interface.php:825
+msgid "Search Results"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.interface.php:868
+msgid "Archives"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.shortcode.php:67
+#: ../framework/classes/themex.shortcode.php:156
+msgid "Insert Shortcode"
+msgstr ""
+
+#: ../framework/classes/themex.sidebar.php:55
+msgid "Default"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.sidebar.php:90
+msgid "Add Sidebar"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.sidebar.php:199
+msgid "Pages"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:415
+msgid "Verification code is incorrect"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:418
+msgid "Verification code is empty"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:423
+msgid "Please fill in all fields"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:426
+#: ../framework/classes/themex.user.php:601
+msgid "Invalid email address"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:428
+msgid "This email is already in use"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:432
+msgid "Invalid character used in username"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:434
+msgid "This username is already taken"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:438
+#: ../framework/classes/themex.user.php:1336
+msgid "Password must be at least 4 characters long"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:440
+#: ../framework/classes/themex.user.php:1338
+msgid "Password must be not more than 16 characters long"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:442
+#: ../framework/classes/themex.user.php:1340
+msgid "Password contains invalid characters"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:444
+#: ../framework/classes/themex.user.php:1342
+msgid "Passwords do not match"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:459
+msgid "Registration complete! Check your mailbox to activate the account"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:460
+msgid "Account Confirmation"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:482
+msgid "Registration Complete"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:535
+msgid "Invalid username or password"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:539
+msgid "This account is not activated"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:574
+msgid "Password recovery not allowed"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:595
+msgid "Password reset link is sent"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:597
+msgid "Error sending email"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:801
+msgid "years old"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1022
+msgid "Selected gift has been successfully sent"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1025
+msgid "You have exceeded the number of gifts"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1102
+#: ../framework/classes/themex.user.php:1160
+#: ../framework/classes/themex.user.php:1225
+msgid "Free"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1346
+msgid "Password has been successfully changed"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1580
+msgid "New Message"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1589
+msgid "Message field must not be empty"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1592
+msgid "You have exceeded the number of messages"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1683
+msgid "Offline"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1687
+msgid "Online"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1716
+msgid "New chat message from"
+msgstr ""
+
+#: ../framework/classes/themex.user.php:1765
+msgid "Photo"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/themex.user.php:1840
+msgid "Profile Text"
+msgstr ""
+
+#: ../framework/classes/themex.user.php:1886
+msgid "Updated"
+msgstr ""
+
+#: ../framework/classes/themex.woo.php:70
+msgid "Show Country"
+msgstr ""
+
+#: ../framework/classes/themex.woo.php:77
+msgid "Show City"
+msgstr ""
+
+#: ../framework/classes/themex.woo.php:84
+msgid "Show State"
+msgstr ""
+
+#: ../framework/classes/themex.woo.php:91
+msgid "Show Address"
+msgstr ""
+
+#: ../framework/classes/themex.woo.php:98
+msgid "Show Postcode"
+msgstr ""
+
+#: ../framework/classes/themex.woo.php:105
+msgid "Show Company"
+msgstr ""
+
+#: ../framework/classes/themex.woo.php:112
+msgid "Show Phone"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/widgets/themex.advert.php:6
+msgid "Shows banner with a link"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/widgets/themex.advert.php:7
+msgid "Banner"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/widgets/themex.advert.php:50
+msgid "Image"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/widgets/themex.advert.php:54
+msgid "Link"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/widgets/themex.advert.php:58
+msgid "Target"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/widgets/themex.search.php:6
+msgid "Shows profile search form"
+msgstr ""
+
+# @ lovestory
+#: ../framework/classes/widgets/themex.search.php:7
+#: ../framework/classes/widgets/themex.search.php:15
+#: ../framework/classes/widgets/themex.search.php:20
+#: ../framework/classes/widgets/themex.search.php:44
+msgid "Profile Search"
+msgstr ""
+
+# @ lovestory
+#: ../framework/templates/index.php:18
+msgid "Reset Options"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/form-checkout.php:41
+msgid "Billing Details"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/form-checkout.php:51
+msgid "I accept the"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/form-checkout.php:51
+#: ../woocommerce/checkout/review-order.php:141
+msgid "terms &amp; conditions"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/form-checkout.php:59
+msgid "Payment Methods"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/review-order.php:11
+msgid "Total"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/review-order.php:16
+msgid "Cart Subtotal"
+msgstr ""
+
+#: ../woocommerce/checkout/review-order.php:21
+#: ../woocommerce/checkout/review-order.php:53
+msgid "Coupon:"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/review-order.php:59
+msgid "Order Total"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/review-order.php:119
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/review-order.php:121
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/review-order.php:128
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the <em>Update Totals</em> button before placing your "
+"order. You may be charged more than the amount stated above if you fail to "
+"do so."
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/review-order.php:128
+msgid "Update totals"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/review-order.php:132
+msgid "Place order"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/review-order.php:141
+msgid "I have read and accept the"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:35
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction."
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:39
+msgid "Please attempt your purchase again or go to your account page."
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:41
+msgid "Please attempt your purchase again."
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:45
+msgid "Pay"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:47
+msgid "My Account"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:51
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:54
+msgid "Order:"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:58
+msgid "Date:"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:62
+msgid "Total:"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/checkout/thankyou.php:67
+msgid "Payment method:"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/myaccount/form-change-password.php:12
+#: ../woocommerce/myaccount/form-lost-password.php:19
+msgid "New password"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/myaccount/form-change-password.php:15
+#: ../woocommerce/myaccount/form-lost-password.php:22
+msgid "Re-enter new password"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/myaccount/form-change-password.php:18
+#: ../woocommerce/myaccount/form-lost-password.php:28
+msgid "Save"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/myaccount/form-login.php:14
+#: ../woocommerce/myaccount/form-login.php:26
+msgid "Login"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/myaccount/form-login.php:17
+#: ../woocommerce/myaccount/form-lost-password.php:14
+msgid "Username or email"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/myaccount/form-login.php:36
+msgid "Lost Password?"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/myaccount/form-login.php:59
+msgid "Re-enter password"
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/myaccount/form-lost-password.php:12
+msgid ""
+"Lost your password? Please enter your username or email address. You will "
+"receive a link to create a new password via email."
+msgstr ""
+
+# @ lovestory
+#: ../woocommerce/myaccount/form-lost-password.php:17
+msgid "Enter a new password below."
+msgstr ""
