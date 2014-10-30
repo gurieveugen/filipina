@@ -884,7 +884,7 @@ p > .button.large {
 /*-------------------------------- Columns -------------------------------*/
 
 .container {
-	width:1000px;
+	width:940px;
 	padding:0 30px;
 	margin:0 auto;
 	position:relative;
@@ -3899,8 +3899,6 @@ body > div.site-wrap > div.content-wrap > section > div.filtered-search > div.pr
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px){
 #featured-left,#featured-right{display:none;}
-.header-password-form{ display:none;}
-.membership-box{ float:none !important; margin:auto !important;}
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -3942,7 +3940,3 @@ body > div.site-wrap > div.content-wrap > section > div.filtered-search > div.pr
 .inbox_p ul.messages li .avatar img{
 	border-radius: 50%;
 }
-.slider-container{ background:url(images/Untitled-4.jpg) center top no-repeat;}
-.membership-box{ height:297px; width:280px;background-color:black;color:white;padding-top:10px;font-size:16px; float:right; margin:90px 0;}
-
-

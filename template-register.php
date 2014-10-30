@@ -9,11 +9,16 @@ Template Name: Registration
 <?php if(get_option('users_can_register')):?>
 <div class="">
 	<div class="section-title">
-		<h1><?php _e('Register', 'lovestory'); ?> REGISTER</h1>
+		<h1><?php _e('Registration', 'lovestory'); ?></h1>
 	</div>
 </div>
 <?php endif;?>
-<div class="facebook-login-area">
+<div class="clear"></div>
+<?php if(get_option('users_can_register')) { ?>
+<div class="column eightcolt">
+    <div class="sub-title">
+    	<h2><?php _e('<b>100% Free site </b><br>(You might decide to pay only for added visibility)!','lovestory'); ?></h2>
+        <div class="facebook-login-area">
 <div class="column fourcol">
 	<form class="ajax-form formatted-form" action="<?php echo AJAX_URL; ?>" method="POST">
 		<div class="message"></div>
@@ -32,15 +37,6 @@ Template Name: Registration
 	</form>
 </div>
 </div>
-<div class="clear"></div>
-<div class="column fourcol">
-<div class="clear"></div>
-	UPLOAD IMAGE OPTION HERE    
-</div>
-<?php if(get_option('users_can_register')) { ?>
-<div class="column eightcol last">
-    <div class="sub-title">
-    	<h2><?php _e('100% Free site (You might decide to pay only for added visibility)!','lovestory'); ?></h2>
         <h3>
 		<?php _e('This below are the only info we require you to provide us to register on our site (no more forms to fill-up after this)!','lovestory'); ?>
         </h3>
@@ -83,7 +79,7 @@ Template Name: Registration
         <?php if(!ThemexCore::checkOption('user_gender')):?>
             <div class="column fourcol">
                 <div class="field-wrap">
-                <?php _e('Gender', 'lovestory'); ?>
+                <?php _e('My geender is', 'lovestory'); ?>
                     <div class="select-field">
                         <span></span>
                         <?php 
@@ -101,7 +97,7 @@ Template Name: Registration
         <?php endif;?>
         <div class="column fourcol">
             <div class="field-wrap">
-            	<?php _e('Seeking', 'lovestory'); ?>
+            	<?php _e('I am seeking a ', 'lovestory'); ?>
                 <div class="select-field">
                     <span></span>
                     <?php 
@@ -119,7 +115,7 @@ Template Name: Registration
         <?php if(!ThemexCore::checkOption('user_age')):?>
         <div class="column fourcol last">
             <div class="field-wrap">
-            	<?php _e('Age', 'lovestory'); ?>
+            	<?php _e('My age is', 'lovestory'); ?>
                 <div class="select-field">
                     <span></span>
                     <?php 
@@ -136,7 +132,7 @@ Template Name: Registration
         <?php endif;?>
         <div class="clear"></div>
         <?php if(!ThemexCore::checkOption('user_location')):?>
-            <div class="column fourcol">
+            <div class="column sixcol">
             <div class="field-wrap">
                 <?php _e('Country', 'lovestory'); ?>
                 <div class="select-field">
@@ -153,13 +149,46 @@ Template Name: Registration
                 </div>
             </div>
             </div>
-            <div class="column fourcol last">
-            <div class="field-wrap">
-                <?php _e('City', 'lovestory'); ?>
-                <input type="text" name="city" size="50" value="" />                
-            </div>
+            <div class="column sixcol last">
+                <div class="field-wrap">
+                    <?php _e('City', 'lovestory'); ?>
+                    <input type="text" name="city" size="50" value="" />                
+                </div>
             </div>
         <?php endif;?>
+        <div class="clear"></div>
+        <div class="column sixcol">       
+        	<div class="field-wrap">             
+            <input type="text" name="height-in-cm" id="height-in-cm" placeholder="<?php _e('Height', 'lovestory'); ?>">
+            </div>
+        </div>
+        <div class="column sixcol last">       
+        	<div class="field-wrap">             
+            	<input type="text" name="weight-in-kilos" id="weight-in-kilos" 
+                placeholder="<?php _e('Weight', 'lovestory'); ?>" required="required">
+            </div>
+        </div>
+        <div class="clear"></div>        
+        <div class="column sixcol">       
+        	<div class="field-wrap">
+             <?php _e('Wants to meet', 'lovestory'); ?>
+           	 <input type="text" value="" name="wants-to-meet" id="wants-to-meet">
+           </div>
+        </div>
+        <div class="clear"></div>
+        <div class="description">
+        	<div class="field-wrap">
+        		<textarea name="description" id="user_description" placeholder="<?php _e('Description', 'lovestory'); ?>"></textarea>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="terms">
+        	<article>
+            <?php _e('By clicking the Sign up button below, I certify that I am <b>18 years old</b> and agree to the<br />','lovestory'); ?>
+            <a href="http://whey-proteins.com/terms-of-use"><?php _e('<b>Terms of Use</b>','lovestory'); ?></a>        
+            </article>
+        	
+        </div>
 		<?php if(ThemexCore::checkOption('user_captcha')) { ?>
 		<div class="form-captcha">
 			<img src="<?php echo THEMEX_URI; ?>assets/images/captcha/captcha.php" alt="" />
@@ -168,7 +197,7 @@ Template Name: Registration
 		<div class="clear"></div>
 		<?php } ?>
         <div class="clear"></div>
-		<a href="#" class="button submit-button"><?php _e('Register', 'lovestory'); ?></a>
+		<a href="#" class="button submit-button"><?php _e('Sign Up', 'lovestory'); ?></a>
 		<div class="loader"></div>
 		<input type="hidden" name="user_action" value="register_user" />
 		<input type="hidden" class="nonce" value="<?php echo wp_create_nonce(THEMEX_PREFIX.'nonce'); ?>" />
@@ -182,18 +211,24 @@ Template Name: Registration
             $('#gender').change(function() {
 				$('#seeking option').removeAttr('selected');
                 if($(this).val()=='man')
-				{					
+				{	
+					$('#height-in-cm').val("5'7''");
+					$('#weight-in-kilos').val("150");				
 					$('#seeking option[value=\'woman\']').attr('selected','selected');
 					$('#seeking option[value=\'woman\']').select();
 				}
 				else
 				{
+					$('#height-in-cm').val("5");
+					$('#weight-in-kilos').val("100");
 					$('#seeking option[value=\'man\']').attr('selected','selected');
 					$('#seeking option[value=\'man\']').select();
 				}
             });
         });
 	</script>
+</div>
+<div class="column fourcol last">
 </div>
 <?php } ?>
 <div class="clear"></div>

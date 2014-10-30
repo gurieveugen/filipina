@@ -1,0 +1,70 @@
+.is_clickable {
+  cursor: hand;
+  cursor: pointer;
+}
+.nstSlider {
+  cursor: hand;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  height: 20px;
+  background: #53AED2;
+  margin-left:auto;
+  margin-right:auto;
+}
+.nstSlider .leftGrip.gripHighlighted {
+  background: #53AED2;
+}
+.nstSlider .rightGrip.gripHighlighted {
+  background: #53AED2;
+}
+.nstSlider .rightGrip,
+.nstSlider .leftGrip {
+  position: absolute;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+}
+.nstSlider .bar {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  background: #ffffff;
+  height: 8px;
+  top: 6px;
+}
+.nstSlider .highlightPanel {
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  background: #e87722;
+  height: 20px;
+  top: 0;
+}
+
+.leftLabel{
+	margin-top:1%;
+	margin-left:45%;
+}
+
+.after_leftLabel_word{
+	margin-top:1%;
+	margin-left:1%;
+}
+
+.leftLabel, .after_leftLabel_word{
+	float:left;
+}

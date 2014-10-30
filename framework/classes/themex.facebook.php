@@ -7,7 +7,6 @@
  * @class ThemexFacebook
  * @author Themex
  */
- 
 class ThemexFacebook {
 
 	/** @var array Contains module data. */
@@ -104,8 +103,7 @@ class ThemexFacebook {
      */
 	public static function loginUser() {
 		if(isset($_GET['facebook_login']) && !is_user_logged_in() && isset($_COOKIE['fbsr_'.ThemexCore::getOption('user_facebook_id')])) {
-			$cookie=self::decodeCookie();
-			
+			$cookie=self::decodeCookie();			
 			if(isset($cookie['user_id'])) {
 				$users=get_users(array(
 					'meta_key' => 'facebook_id', 
@@ -139,6 +137,8 @@ class ThemexFacebook {
 						}
 						
 						$user=wp_create_user($profile['username'], wp_generate_password(10), $profile['email']);
+						
+						echo print_r($user);
 						if(!is_wp_error($user)) {
 							wp_new_user_notification($user);
 							add_user_meta($user, 'facebook_id', $profile['id'], true);							
@@ -150,12 +150,14 @@ class ThemexFacebook {
 							
 							if(isset($profile['last_name'])) {
 								update_user_meta($user, 'last_name', $profile['last_name']);
-							}
-							
+							}							
 							wp_set_auth_cookie($user, true);
 							wp_redirect(get_author_posts_url($user));
+							
 						} else {
-							self::logoutUser();
+							echo 'LOGIN USER HERE redirect';
+							die();
+							//self::logoutUser();
 						}
 
 						exit();

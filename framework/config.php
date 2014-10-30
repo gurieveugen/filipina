@@ -1610,6 +1610,7 @@ $config = array (
 		'genders' => array(
 			'man' => __('man', 'lovestory'),
 			'woman' => __('woman', 'lovestory'),
+			'ladyboy' => __('ladyboy', 'lovestory'),
 		),
 	),
 	

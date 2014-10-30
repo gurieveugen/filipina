@@ -89,6 +89,11 @@ class ThemexUser {
 		}
 	}
 	
+	public static function getNotofication($ID){
+		$user['favorites']=themex_keys(ThemexCore::getUserMeta($ID, 'favorites', array()));
+		
+	}
+	
 	/**
 	 * Gets user data
      *
@@ -106,7 +111,7 @@ class ThemexUser {
 		$user['ID']=$ID;		
 		$user['status']=self::getStatus($ID);
 		
-		$user['profile_url']=get_author_posts_url($ID);		
+		$user['profile_url']=get_author_posts_url($ID);			
 		$user['message_url']=ThemexCore::getUrl('message', $ID);
 		$user['chat_url']=ThemexCore::getUrl('chat', $ID);
 		$user['profile']=self::getProfile($ID);
@@ -115,10 +120,12 @@ class ThemexUser {
 			$user['memberships_url']=ThemexCore::getUrl('memberships', $ID);
 			$user['settings_url']=ThemexCore::getUrl('settings', $ID);
 			$user['messages_url']=ThemexCore::getUrl('messages', $ID);
+			$user['editprofile_url']=ThemexCore::getUrl('editprofile', $ID);
 		
 			$user['favorites']=themex_keys(ThemexCore::getUserMeta($ID, 'favorites', array()));
 			$user['ignores']=themex_keys(ThemexCore::getUserMeta($ID, 'ignores', array()));
 			$user['photos']=themex_keys(ThemexCore::getUserMeta($ID, 'photos', array()));
+			$user['giftsS']=themex_keys(ThemexCore::getUserMeta($ID, 'gifts', array()));
 			$user['gifts']=ThemexCore::getUserMeta($ID, 'gifts', array());
 			$user['membership']=self::getMembership($ID, $user['profile']['gender']);
 			$user['settings']=self::getSettings($ID);
@@ -138,7 +145,7 @@ class ThemexUser {
 		
 		global $wpdb;
 		$wpdb->query('SET SQL_BIG_SELECTS=1');
-	
+		
 		$args['exclude']=self::$data['user']['ID'];
 		$args['orderby']='registered';
 		$args['order']='DESC';
@@ -159,6 +166,84 @@ class ThemexUser {
 				),
 			);
 		}
+		// NOEL MODIFICATION
+			/********** SEARCH BY NAME ****************/
+			if(isset($_GET['firstname']) && isset($_GET['lastname']) && $_GET['firstname']!='' && !empty($_GET['lastname'])):
+					$args['meta_query']=array(
+						array(
+							'key' => 'first_name',
+							'value' => sanitize_title($_GET['firstname']),
+							'compare' => '==',
+						),
+						array(
+								'key' => 'last_name',
+								'value' => sanitize_title($_GET['lastname']),
+								'compare' => '==',
+							),
+					);
+			
+			else:				
+					if(isset($_GET['firstname']) && !empty($_GET['firstname'])) {
+						$args['meta_query']=array(
+							array(
+								'key' => 'first_name',
+								'value' => sanitize_title($_GET['firstname']),
+								'compare' => '==',
+							),
+						);
+					}
+					if(isset($_GET['lastname']) && !empty($_GET['lastname'])) {
+						$args['meta_query']=array(
+							array(
+								'key' => 'last_name',
+								'value' => sanitize_title($_GET['lastname']),
+								'compare' => '==',
+							),
+						);
+					}
+			endif;
+			/********** END SEARCH BY NAME ****************/
+			/********** ADVANCED SEARCH ****************/
+			if(isset($_GET['description']) && $_GET['description']!='') {
+				//echo print_r($_GET);
+				$args['meta_query']=array(
+					array(
+						'key' => 'description',
+						'value' => sanitize_title($_GET['description']),
+						'compare' => '==',
+					),
+				);
+			}
+			if(isset($_GET['wants-to-meet']) && $_GET['wants-to-meet']!='') {
+				$args['meta_query']=array(
+					array(
+						'key' => '_'.THEMEX_PREFIX.'wants-to-meet',
+						'value' => sanitize_title($_GET['wants-to-meet']),
+						'compare' => '==',
+					),
+				);
+			}
+			if(isset($_GET['height-in-cm'])&& $_GET['height-in-cm']!='') {			
+				$args['meta_query']=array(
+					array(
+						'key' => '_'.THEMEX_PREFIX.'height-in-cm',
+						'value' => sanitize_title($_GET['height-in-cm']),
+						'compare' => '==',
+					),
+				);
+			}
+			if(isset($_GET['weight-in-kilos'])&& $_GET['weight-in-kilos']!='') {
+				$args['meta_query']=array(
+					array(
+						'key' => '_'.THEMEX_PREFIX.'weight-in-kilos',
+						'value' => sanitize_title($_GET['weight-in-kilos']),
+						'compare' => '==',
+					),
+				);
+			}	
+			//echo print_r($args);
+			/********** END ADVANCED SEARCH ****************/	
+		// END NOEL MODIFICATION
 		
 		if(self::isUserFilter()) {
 			if(isset($_GET['gender'])) {
@@ -207,18 +292,27 @@ class ThemexUser {
 				);
 			}
 			
+			if(isset($_GET['username']) && !empty($_GET['username'])) {
+				return self::getUsers_username($_GET['username']);
+			}
+			
+			
 			if(isset(ThemexForm::$data['profile']) && is_array(ThemexForm::$data['profile'])) {
 				foreach(ThemexForm::$data['profile'] as $field) {
+					
 					if(isset($field['search'])) {
+					
 						$name=themex_sanitize_key($field['name']);
 						if(isset($_GET[$name]) && !empty($_GET[$name])) {
 							if(in_array($field['type'], array('text', 'textarea'))) {
+								
 								$args['meta_query'][]=array(
 									'key' => '_'.THEMEX_PREFIX.$name,
 									'value' => sanitize_text_field($_GET[$name]),
 									'compare' => 'LIKE',
 								);
 							} else {
+								
 								$args['meta_query'][]=array(
 									'key' => '_'.THEMEX_PREFIX.$name,
 									'value' => sanitize_text_field($_GET[$name]),
@@ -258,6 +352,21 @@ class ThemexUser {
 		
 		return $users;
 	}
+	
+	
+		public static function getUsers_username($username){
+			
+			global $wpdb;
+		
+				$users = $wpdb->get_results($wpdb->prepare("
+				SELECT ID FROM {$wpdb->users} WHERE UPPER(`user_login`) LIKE '%s' 
+				", strtoupper($username) . "%" ));
+		
+			return $users;
+			
+		}
+	
+		
 	
 	/**
 	 * Removes user
@@ -541,7 +650,8 @@ class ThemexUser {
 		}
 		
 		if(empty(ThemexInterface::$messages)) {
-			ThemexInterface::$messages[]='<a href="'.get_author_posts_url($user->ID).'" class="redirect"></a>';
+			//ThemexInterface::$messages[]='<a href="'.get_author_posts_url($user->ID).'" class="redirect"></a>';
+			ThemexInterface::$messages[]='<a href="Home" class="redirect"></a>';
 		} else {
 			wp_logout();
 		}
@@ -640,6 +750,9 @@ class ThemexUser {
 		$profile['gender']=themex_array_value('_'.THEMEX_PREFIX.'gender', $meta);
 		$profile['seeking']=themex_array_value('_'.THEMEX_PREFIX.'seeking', $meta);
 		$profile['age']=themex_array_value('_'.THEMEX_PREFIX.'age', $meta);
+		$profile['height-in-cm']=themex_array_value('_'.THEMEX_PREFIX.'height-in-cm', $meta);
+		$profile['weight-in-kilos']=themex_array_value('_'.THEMEX_PREFIX.'weight-in-kilos', $meta);
+		$profile['wants-to-meet']=str_replace('+',' ',themex_array_value('_'.THEMEX_PREFIX.'wants-to-meet', $meta));
 		
 		if(isset(ThemexForm::$data['profile']) && is_array(ThemexForm::$data['profile'])) {
 			foreach(ThemexForm::$data['profile'] as $field) {
@@ -665,6 +778,8 @@ class ThemexUser {
 	
 		$filters=self::getFilters();
 		$fields=array(
+			
+			
 			array(
 				'name' => 'gender',
 				'type' => 'text',
@@ -780,9 +895,8 @@ class ThemexUser {
      * @return void
      */
 	public static function updateAvatar($ID, $file) {
-		wp_delete_attachment(ThemexCore::getUserMeta($ID, 'avatar'));
+		wp_delete_attachment(ThemexCore::getUserMeta($ID, 'avatar'), true);
 		$attachment=ThemexCore::uploadImage($file);
-		
 		if(isset($attachment['ID']) && $attachment['ID']!=0) {
 			ThemexCore::updateUserMeta($ID, 'avatar', $attachment['ID']);
 		}
@@ -1469,23 +1583,256 @@ class ThemexUser {
 			AND c.user_id = %d)
 			OR (c.user_id = %d
 			AND c.comment_parent = %d))
-			AND c.comment_type = 'message'
+			AND c.comment_type = 'message' 
+			AND c.comment_owner = %d
 			ORDER BY c.comment_date DESC
 			LIMIT %d, %d
-		", $ID, $user, $ID, $user, $offset, $number));
-		
-		if(!empty($messages)) {
-			$wpdb->query($wpdb->prepare("
-			UPDATE {$wpdb->comments} c
-			SET c.comment_karma = '1'
-			WHERE c.comment_parent = %d
-			AND c.user_id = %d
-			AND c.comment_type = 'message'
-		", $ID, $user));
-		}
+		", $ID, $user, $ID, $user, $ID, $offset, $number));
 		
 		$messages=array_reverse($messages);
 		return $messages;
+	}
+	
+	
+	       public static function getMessagesInbox($ID, $user, $page=null) {
+			global $wpdb;
+			
+			$offset=0;
+			$number=999999;
+			if(!is_null($page)) {
+				$offset=(intval($page)-1)*5;
+				$number=5;
+			}
+		
+			$messages=$wpdb->get_results($wpdb->prepare("
+				SELECT c.comment_karma, c.comment_ID as comment_ID, c.user_id as user_id, 
+				c.comment_date as comment_date, c.comment_content as comment_content FROM {$wpdb->comments} c
+				WHERE c.comment_parent = %d 
+				AND c.comment_type = 'message'
+				AND c.comment_owner = %d 
+				AND c.trash=0
+				AND c.draft=0
+				ORDER BY c.comment_date DESC
+				LIMIT %d, %d
+			", $ID, $ID, $offset, $number));
+			
+			
+			//$messages=array_reverse($messages);
+			return $messages;
+	}
+
+	 public static function getMessagesInboxAdmin($ids, $user, $page=null) 
+	 {
+			global $wpdb;
+			
+			$offset=0;
+			$number=999999;
+			if(!is_null($page)) 
+			{
+				$offset=(intval($page)-1)*5;
+				$number=5;
+			}
+			
+			$messages=$wpdb->get_results(
+				$wpdb->prepare("
+					SELECT c.comment_karma, c.comment_ID as comment_ID, c.user_id as user_id, 
+					c.comment_date as comment_date, c.comment_content as comment_content FROM {$wpdb->comments} c
+					WHERE c.comment_parent in({$ids})
+					AND c.comment_type = 'message'
+					AND c.comment_owner in({$ids})
+					AND c.trash=0
+					AND c.draft=0
+					ORDER BY c.comment_date DESC
+					LIMIT %d, %d", 
+					$offset, $number
+				)
+			);
+			echo '<pre>';
+			var_dump($wpdb->prepare("
+					SELECT c.comment_karma, c.comment_ID as comment_ID, c.user_id as user_id, 
+					c.comment_date as comment_date, c.comment_content as comment_content FROM {$wpdb->comments} c
+					WHERE c.comment_parent in({$ids})
+					AND c.comment_type = 'message'
+					AND c.comment_owner in({$ids})
+					AND c.trash=0
+					AND c.draft=0
+					ORDER BY c.comment_date DESC
+					LIMIT %d, %d", 
+					$offset, $number
+				));
+			echo '</pre>';
+			
+			//$messages=array_reverse($messages);
+			return $messages;
+	}
+	
+	  public static function getMessagesSent($ID, $user, $page=null) {
+			global $wpdb;
+			
+			$offset=0;
+			$number=999999;
+			if(!is_null($page)) {
+				$offset=(intval($page)-1)*6;
+				$number=6;
+			}
+		
+			$messages=$wpdb->get_results($wpdb->prepare("
+				SELECT c.comment_karma, c.comment_parent, c.comment_ID as comment_ID, c.user_id as user_id, 
+				c.comment_date as comment_date, c.comment_content as comment_content FROM {$wpdb->comments} c
+				WHERE c.user_id = %d 
+				AND c.trash=0
+				AND c.draft=0
+				AND c.comment_owner = %d
+				AND c.comment_type = 'message'
+				ORDER BY c.comment_date DESC
+				LIMIT %d, %d
+			", $ID, $ID, $offset, $number));
+	
+			
+			//$messages=array_reverse($messages);
+			return $messages;
+	}
+	
+		  public static function getMessagesUnread($ID, $user, $page=null) {
+			global $wpdb;
+			
+			$offset=0;
+			$number=999999;
+			if(!is_null($page)) {
+				$offset=(intval($page)-1)*5;
+				$number=5;
+			}
+		
+			$messages=$wpdb->get_results($wpdb->prepare("
+				SELECT c.comment_karma, c.comment_parent, c.comment_ID as comment_ID, c.user_id as user_id, 
+				c.comment_date as comment_date, c.comment_content as comment_content FROM {$wpdb->comments} c
+				WHERE c.comment_parent = %d 
+				AND c.comment_karma = '0'
+				AND c.trash=0
+				AND c.draft=0
+				AND c.comment_owner = %d
+				AND c.comment_type = 'message' 
+				ORDER BY c.comment_date DESC
+				LIMIT %d, %d
+			", $ID, $ID, $offset, $number));
+
+			// if(!empty($messages)) 
+			// {
+			// 	$wpdb->query(
+			// 		$wpdb->prepare(
+			// 			"UPDATE {$wpdb->comments} c SET c.comment_karma = '1' WHERE c.comment_parent = %d AND c.comment_type = 'message'",
+			// 			$ID
+			// 		)
+			// 	);
+			// }
+
+			
+			//$messages=array_reverse($messages);
+			return $messages;
+	}
+	
+	
+	  public static function getMessagesTrash($ID, $user, $page=null) {
+			global $wpdb;
+			
+			$offset=0;
+			$number=999999;
+			if(!is_null($page)) {
+				$offset=(intval($page)-1)*5;
+				$number=5;
+			}
+		
+			$messages=$wpdb->get_results($wpdb->prepare("
+				SELECT c.comment_karma, c.comment_parent, c.comment_ID as comment_ID, c.user_id as user_id, 
+				c.comment_date as comment_date, c.comment_content as comment_content FROM {$wpdb->comments} c
+				WHERE (c.comment_parent = %d OR c.user_id = %d) 
+				AND c.trash=1
+				AND c.draft=0
+				AND c.comment_owner = %d
+				AND c.comment_type = 'message' 
+				ORDER BY c.comment_date DESC
+				LIMIT %d, %d
+			", $ID, $ID, $ID, $offset, $number));
+
+			
+			//$messages=array_reverse($messages);
+			return $messages;
+	}
+	
+	public static function getMessagesDraft($ID, $user, $page=null) {
+			global $wpdb;
+			
+			$offset=0;
+			$number=999999;
+			if(!is_null($page)) {
+				$offset=(intval($page)-1)*5;
+				$number=5;
+			}
+		
+			$messages=$wpdb->get_results($wpdb->prepare("
+				SELECT c.comment_karma, c.comment_parent, c.comment_ID as comment_ID, c.user_id as user_id, 
+				c.comment_date as comment_date, c.comment_content as comment_content FROM {$wpdb->comments} c
+				WHERE c.comment_parent = %d 
+				AND c.draft=1
+				AND c.trash=0
+				AND c.comment_owner = %d
+				AND c.comment_type = 'message' 
+				ORDER BY c.comment_date DESC
+				LIMIT %d, %d
+			", $ID, $ID, $offset, $number));
+
+			
+			//$messages=array_reverse($messages);
+			return $messages;
+	}
+	
+	
+	  public static function messagesDelete($ID, $user_id, $owner) {
+			global $wpdb;
+		
+				$messages_trash=$wpdb->get_results($wpdb->prepare("
+					SELECT trash FROM {$wpdb->comments} 
+					WHERE comment_ID = %d  
+					AND comment_owner = %d 
+					AND trash=1
+				", $ID, $user_id));
+				if($messages_trash){
+				$wpdb->query($wpdb->prepare("
+					DELETE FROM {$wpdb->comments} 
+					WHERE comment_ID = %d  
+					AND comment_owner = %d
+				", $ID, $user_id));
+				}else{
+					$wpdb->query($wpdb->prepare("
+					UPDATE {$wpdb->comments} SET trash=1 WHERE comment_ID = %d AND comment_type = 'message' AND comment_owner = %d
+				", $ID, $user_id));
+				}
+		
+	}
+	
+	public static function messagesRead($ID, $user_id){
+			global $wpdb;
+			$wpdb->query($wpdb->prepare("
+			UPDATE {$wpdb->comments} c
+			SET c.comment_karma = '1'
+			WHERE c.comment_ID = %d 
+			AND c.comment_type = 'message' 
+			AND c.comment_owner = %d
+		", $ID, $user_id));
+	}
+	
+	
+	public static function messagesUnread($ID, $user_id){
+
+			global $wpdb;
+			$wpdb->query($wpdb->prepare("
+			UPDATE {$wpdb->comments} c
+			SET c.comment_karma = '0'
+			WHERE c.comment_ID = %d 
+			AND c.comment_type = 'message' 
+			AND c.comment_owner = %d
+		", $ID, $user_id));
+	
 	}
 	
 	/**
@@ -1517,7 +1864,8 @@ class ThemexUser {
 			SELECT c.user_id as user_id FROM {$wpdb->comments} c			
 			WHERE c.comment_parent = %d
 			AND c.comment_type = 'message'
-			AND c.comment_karma = '0'
+			AND c.comment_karma = '0' 
+			AND c.comment_owner = %d
 			ORDER BY c.comment_date DESC
 		", $ID, $ID));
 		
@@ -1538,7 +1886,36 @@ class ThemexUser {
 	 * @param string $message
      * @return void
      */
-	public static function addMessage($ID, $user, $message) {
+	public static function viewed($user_id, $viewed_user_id) {
+		global $wpdb;
+	
+		$found_1h = $wpdb->get_results( $wpdb->prepare("
+			SELECT id FROM wp_views			
+			WHERE user_id = %d 
+			AND viewed_user_id = %d 
+			AND date > SUBDATE( timestamp(now()), INTERVAL 1 HOUR)
+		", $user_id, $viewed_user_id));
+		//var_dump($found_1h);
+		if(count($found_1h) == 0) {
+		
+			require_once('./wp-config.php');
+			//global $wpdb;
+			$table_name = $wpdb->prefix . "views";
+			$wpdb->insert( $table_name, array( 'user_id' => (int)$user_id, 'viewed_user_id' => (int)$viewed_user_id ) );
+		}
+	}
+
+	/**
+	 * Adds user message_mass
+     *
+     * @access public
+	 * @param int $ID
+	 * @param int $user
+	 * @param string $message
+     * @return void
+     */
+	public static function addMessageMass($ID, $user, $message) {
+	
 		if(self::$data['user']['membership']['messages']>0) {
 			$filters=self::getFilters();
 			$message=trim(preg_replace($filters, '', $message));
@@ -1546,12 +1923,13 @@ class ThemexUser {
 			if(!empty($message)) {
 				if(!self::isIgnored($ID, false)) {
 					$sender=self::$data['user'];
-					$message=wp_insert_comment(array(
+					wp_insert_comment(array(
 						'comment_post_ID' => 0,
 						'comment_karma' => 0,
 						'comment_type' => 'message',
 						'comment_parent' => $user,
 						'user_id' => $sender['ID'],
+						'comment_owner' => (int)$user,
 						'comment_author' => $sender['login'],
 						'comment_author_email' => $sender['email'],
 						'comment_content' => wp_kses($message, array(
@@ -1567,6 +1945,29 @@ class ThemexUser {
 						)),
 					));
 					
+					$message=wp_insert_comment(array(
+						'comment_post_ID' => 0,
+						'comment_karma' => 0,
+						'comment_type' => 'message',
+						'comment_parent' => $user,
+						'user_id' => $sender['ID'],
+						'comment_owner' => (int)$sender['ID'],
+						'comment_author' => $sender['login'],
+						'comment_author_email' => $sender['email'],
+						'comment_content' => wp_kses($message, array(
+							'strong' => array(),
+							'em' => array(),
+							'a' => array(
+								'href' => array(),
+								'title' => array(),
+								'target' => array(),
+							),
+							'p' => array(),
+							'br' => array(),
+						)),
+					));
+					
+					
 					if(!ThemexCore::checkOption('user_notice')) {
 						$recipient=self::$data['active_user'];
 						if(in_array($recipient['settings']['notices'], array(1, 2))) {
@@ -1577,18 +1978,247 @@ class ThemexUser {
 								'link' => self::$data['user']['message_url'],
 							);
 						
-							themex_mail($recipient['email'], __('New Message', 'lovestory'), $message, $keywords);
+							$c = themex_mail($recipient['email'], __('New Message', 'lovestory'), $message, $keywords);
+							if($c != true){
+								$message=wp_insert_comment(array(
+									'comment_post_ID' => 0,
+									'comment_karma' => 0,
+									'comment_type' => 'message',
+									'comment_parent' => $user,
+									'draft' => 1,
+									'user_id' => $sender['ID'],
+									'comment_owner' => (int)$sender['ID'],
+									'comment_author' => $sender['login'],
+									'comment_author_email' => $sender['email'],
+									'comment_content' => wp_kses($message, array(
+										'strong' => array(),
+										'em' => array(),
+										'a' => array(
+											'href' => array(),
+											'title' => array(),
+											'target' => array(),
+										),
+										'p' => array(),
+										'br' => array(),
+									)),
+								));
+							}
+						}
+					}
+					
+					self::updateMembership($ID, 'messages', -1);
+				} else {
+					
+				}
+			} else {
+				$message=wp_insert_comment(array(
+						'comment_post_ID' => 0,
+						'comment_karma' => 0,
+						'comment_type' => 'message',
+						'comment_parent' => $user,
+						'draft' => 1,
+						'user_id' => $sender['ID'],
+						'comment_owner' => (int)$sender['ID'],
+						'comment_author' => $sender['login'],
+						'comment_author_email' => $sender['email'],
+						'comment_content' => wp_kses($message, array(
+							'strong' => array(),
+							'em' => array(),
+							'a' => array(
+								'href' => array(),
+								'title' => array(),
+								'target' => array(),
+							),
+							'p' => array(),
+							'br' => array(),
+						)),
+					));
+				
+			}			
+		} else {
+			$message=wp_insert_comment(array(
+						'comment_post_ID' => 0,
+						'comment_karma' => 0,
+						'comment_type' => 'message',
+						'comment_parent' => $user,
+						'draft' => 1,
+						'user_id' => $sender['ID'],
+						'comment_owner' => (int)$sender['ID'],
+						'comment_author' => $sender['login'],
+						'comment_author_email' => $sender['email'],
+						'comment_content' => wp_kses($message, array(
+							'strong' => array(),
+							'em' => array(),
+							'a' => array(
+								'href' => array(),
+								'title' => array(),
+								'target' => array(),
+							),
+							'p' => array(),
+							'br' => array(),
+						)),
+					));
+		}
+		
+	
+	}	
+
+	
+	/**
+	 * Adds user message
+     *
+     * @access public
+	 * @param int $ID
+	 * @param int $user
+	 * @param string $message
+     * @return void
+     */
+	public static function addMessage($ID, $user, $message) {
+	
+		if(self::$data['user']['membership']['messages']>0) {
+			$filters=self::getFilters();
+			$message=trim(preg_replace($filters, '', $message));
+			
+			if(!empty($message)) {
+				if(!self::isIgnored($ID, false)) {
+					$sender=self::$data['user'];
+					wp_insert_comment(array(
+						'comment_post_ID' => 0,
+						'comment_karma' => 0,
+						'comment_type' => 'message',
+						'comment_parent' => $user,
+						'user_id' => $sender['ID'],
+						'comment_owner' => (int)$user,
+						'comment_author' => $sender['login'],
+						'comment_author_email' => $sender['email'],
+						'comment_content' => wp_kses($message, array(
+							'strong' => array(),
+							'em' => array(),
+							'a' => array(
+								'href' => array(),
+								'title' => array(),
+								'target' => array(),
+							),
+							'p' => array(),
+							'br' => array(),
+						)),
+					));
+					
+					$message=wp_insert_comment(array(
+						'comment_post_ID' => 0,
+						'comment_karma' => 0,
+						'comment_type' => 'message',
+						'comment_parent' => $user,
+						'user_id' => $sender['ID'],
+						'comment_owner' => (int)$sender['ID'],
+						'comment_author' => $sender['login'],
+						'comment_author_email' => $sender['email'],
+						'comment_content' => wp_kses($message, array(
+							'strong' => array(),
+							'em' => array(),
+							'a' => array(
+								'href' => array(),
+								'title' => array(),
+								'target' => array(),
+							),
+							'p' => array(),
+							'br' => array(),
+						)),
+					));
+					
+					
+					if(!ThemexCore::checkOption('user_notice')) {
+						$recipient=self::$data['active_user'];
+						if(in_array($recipient['settings']['notices'], array(1, 2))) {
+							$message=ThemexCore::getOption('email_message', 'Hi, %username%! You have received a new message from %sender% %link%.');
+							$keywords=array(
+								'username' => $recipient['login'],
+								'sender' => self::$data['user']['profile']['full_name'],
+								'link' => self::$data['user']['message_url'],
+							);
+						
+							$c = themex_mail($recipient['email'], __('New Message', 'lovestory'), $message, $keywords);
+							if($c != true){
+								$message=wp_insert_comment(array(
+									'comment_post_ID' => 0,
+									'comment_karma' => 0,
+									'comment_type' => 'message',
+									'comment_parent' => $user,
+									'draft' => 1,
+									'user_id' => $sender['ID'],
+									'comment_owner' => (int)$sender['ID'],
+									'comment_author' => $sender['login'],
+									'comment_author_email' => $sender['email'],
+									'comment_content' => wp_kses($message, array(
+										'strong' => array(),
+										'em' => array(),
+										'a' => array(
+											'href' => array(),
+											'title' => array(),
+											'target' => array(),
+										),
+										'p' => array(),
+										'br' => array(),
+									)),
+								));
+							}
 						}
 					}
 					
 					self::updateMembership($ID, 'messages', -1);
 				} else {
 					ThemexInterface::$messages[]=__("You've been added to the ignore list", 'lovestory');
+					
 				}
 			} else {
+				$message=wp_insert_comment(array(
+						'comment_post_ID' => 0,
+						'comment_karma' => 0,
+						'comment_type' => 'message',
+						'comment_parent' => $user,
+						'draft' => 1,
+						'user_id' => $sender['ID'],
+						'comment_owner' => (int)$sender['ID'],
+						'comment_author' => $sender['login'],
+						'comment_author_email' => $sender['email'],
+						'comment_content' => wp_kses($message, array(
+							'strong' => array(),
+							'em' => array(),
+							'a' => array(
+								'href' => array(),
+								'title' => array(),
+								'target' => array(),
+							),
+							'p' => array(),
+							'br' => array(),
+						)),
+					));
 				ThemexInterface::$messages[]=__('Message field must not be empty', 'lovestory');
+				
 			}			
 		} else {
+			$message=wp_insert_comment(array(
+						'comment_post_ID' => 0,
+						'comment_karma' => 0,
+						'comment_type' => 'message',
+						'comment_parent' => $user,
+						'draft' => 1,
+						'user_id' => $sender['ID'],
+						'comment_owner' => (int)$sender['ID'],
+						'comment_author' => $sender['login'],
+						'comment_author_email' => $sender['email'],
+						'comment_content' => wp_kses($message, array(
+							'strong' => array(),
+							'em' => array(),
+							'a' => array(
+								'href' => array(),
+								'title' => array(),
+								'target' => array(),
+							),
+							'p' => array(),
+							'br' => array(),
+						)),
+					));
 			ThemexInterface::$messages[]=__('You have exceeded the number of messages', 'lovestory');
 		}
 		
@@ -1989,4 +2619,158 @@ class ThemexUser {
 		
 		return false;
  	}
+	
+	public static function sendMassMessage($users, $user, $message){
+		$multiple_to_recipients = array();
+		$headers = 'From: ' . $user['email'] . '<' . $user['email'] .'>' . "\r\n";
+		
+		for($i=0; $i < count($users); $i++){
+		
+			self::addMessageMass(self::$data['user']['ID'], $users[$i]->ID, $message);
+			array_push($multiple_to_recipients, $users[$i]->data->user_email);
+		}
+		
+		$multiple_to_recipients = array_values($multiple_to_recipients);
+		$c = themex_mail($multiple_to_recipients, 'LoveStore', 'test mesaj', $headers);
+		//$c = true;
+		
+			
+			return "<div id='bool_message' style='display:none'>1</div>";
+		
+	}
+	
+	public static function boostVisibility($location, $user){
+		global $wpdb;
+		switch($location['type'] ){
+			case '1':
+				$date_plus = date('Y-m-d H:i:s', strtotime($date. ' + ' . $location['time'] . ' days'));
+			break;
+			case '2':
+				$date_plus = date('Y-m-d H:i:s', strtotime($date. ' + ' . $location['time'] . ' months'));
+			break;
+			case '3':
+				$date_plus = date('Y-m-d H:i:s', strtotime($date. ' + ' . $location['time'] . ' years'));
+			break;
+		}
+		$date = date("Y-m-d H:i:s");
+	
+		if($location['country'] == '0' || $location['city'] == '0' || $location['credit'] == '0' || $location['time'] == '0' || $location['type'] == '0'|| $location['gender'] == '0' ){
+			return "<div id='last_id_insert'>faild</div>";
+		}
+		ThemexUser::$data['active_user']=ThemexUser::getUser((int)$user['ID']); 
+		
+		$wpdb->insert( 'wp_boost_visibility', array( 'user_id' => (int)$user['ID'], 'country' => $location['country'],'city' => $location['city'], 'gender' => ThemexUser::$data['active_user']['profile']['gender'], 'startDate'=> $date,'endDate' => $date_plus, 'status' => 1));
+		//var_dump($wpdb->insert_id());
+		if( $wpdb->insert_id <> 0){
+			return "<div id='last_id_insert'>success</div>";
+		}else{
+			return "<div id='last_id_insert'>faild</div>";
+		}
+ 
+	}
+	
+	public static function boostVisibilityAdmin($user_id){
+		global $wpdb;
+		
+		ThemexUser::$data['active_user']=ThemexUser::getUser((int)$user_id); 
+		$date = "0000-00-00 00:00:00";
+		$select_boost = $wpdb->get_results("SELECT id FROM wp_boost_visibility" .
+									" WHERE user_id = $user_id AND startDate = '0000-00-00 00:00:00'");
+		if(!$select_boost){							
+			$wpdb->insert( 'wp_boost_visibility', array( 'user_id' => (int)$user_id, 'country' => ThemexUser::$data['active_user']['profile']['country'],'city' => ThemexUser::$data['active_user']['profile']['city'], 'gender' => ThemexUser::$data['active_user']['profile']['gender'], 'startDate'=> $date,'endDate' => $date, 'status' => 0, 'put_admin' => 1));
+		}else{
+			foreach($select_boost as $val){
+				$wpdb->query($wpdb->prepare("
+						UPDATE wp_boost_visibility 
+						SET put_admin = 1
+						WHERE id = %d 
+					", $val->id));
+			}	
+		}
+	}
+	
+	public static function boostVisibilityAdminR($user_id){
+		global $wpdb;
+				$wpdb->query($wpdb->prepare("
+						UPDATE wp_boost_visibility 
+						SET put_admin = 0 
+						WHERE user_id = %d AND startDate = '0000-00-00 00:00:00'
+					", $user_id));
+	}
+	
+	public static function boostVisibilityAdminShow($user_id){
+		global $wpdb;
+	
+		$select_boost = $wpdb->get_results("SELECT id FROM wp_boost_visibility" .
+									" WHERE user_id = $user_id AND startDate = '0000-00-00 00:00:00' AND put_admin = 1");
+		if($select_boost){							
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	
+	public static function selectBoostVisibility($city, $country, $user_id, $gender, $limit){
+		global $wpdb;
+
+		$current_date = date("Y-m-d H:i:s");
+		
+		$select_endDate = $wpdb->get_results("SELECT id FROM wp_boost_visibility" .
+									" WHERE endDate <= '" . $current_date . "' AND status=1" );
+		if($select_endDate){
+			foreach($select_endDate as $val){
+				$wpdb->query($wpdb->prepare("
+					UPDATE wp_boost_visibility 
+					SET status = 0
+					WHERE id = %d 
+				", $val->id));
+			
+			}
+		}
+		
+		$select_profile_featured = $wpdb->get_results("SELECT user_id FROM wp_boost_visibility" . 
+								" WHERE country like '" . $country . "' AND city like '" . $city . "' AND endDate > '" . $current_date . "' AND status=1 AND gender = '" . $gender . "' AND user_id != " . $user_id . " ORDER BY RAND() LIMIT ".$limit );
+		$count = count($select_profile_featured);
+			
+		if($count > 0){
+			return $select_profile_featured;
+		}else{
+			return $wpdb->get_results("SELECT user_id FROM wp_boost_visibility" . 
+								" WHERE startDate = '0000-00-00 00:00:00' AND put_admin = 1 AND gender = '" . $gender . "' AND user_id != " . $user_id . " ORDER BY RAND() LIMIT ".$limit );
+		
+		}
+		
+ 
+	}
+	
+	public static function loginAdmin($username, $password){
+		if($username === "Administrator" && $password === "123AdministratorLoveStore321@"){
+			$_SESSION['administrator']['login'] = "credentials";
+
+			echo "<script type='text/javascript'>window.location();</script>";
+		}else{
+			return "Invalid Credentials";
+		}
+	}
+	
+	
+	public static function dataMessage($data) {
+		//var_dump($data);
+		$now = new DateTime();
+
+		$date1=date_create($data);
+		//$date2=date_create($now);
+		$diff=date_diff($date1,$now);
+		
+		if($diff->s <> 0) $ago = $diff->s;
+		if($diff->i <> 0) $ago = $diff->i;
+		if($diff->h <> 0) $ago = $diff->h;
+		if($diff->d <> 0) $ago = $diff->d;
+		if($diff->m <> 0) $ago = $diff->m;
+		if($diff->y <> 0) $ago = $diff->y;
+		
+		return $ago;
+	}
+	
 }
