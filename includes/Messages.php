@@ -31,7 +31,6 @@ class Messages{
 		$query = sprintf('
 			SELECT * FROM %1$s as c
 			WHERE c.comment_parent IN(%2$s)
-			AND c.comment_owner IN(%2$s)
 			AND c.comment_type = \'message\'
 			AND c.trash=0
 			AND c.draft=0

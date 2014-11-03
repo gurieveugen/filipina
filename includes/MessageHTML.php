@@ -20,7 +20,7 @@ class MessageHTML{
 
 	public function getHTML()
 	{
-		$to = get_user_by( 'id', $this->message->comment_owner );
+		$to = get_user_by( 'id', $this->message->comment_parent );
 		$img = get_avatar($this->message->user_id, 60);
 		ob_start();
 		?>
@@ -53,7 +53,7 @@ class MessageHTML{
 			'%s/msg?owner=%d&to=%d&msg=%d',
 			get_bloginfo( 'url' ),
 			$this->message->user_id,
-			$this->message->comment_owner,
+			$this->message->comment_parent,
 			$this->message->comment_ID
 		);
 		return sprintf(

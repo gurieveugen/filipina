@@ -1,9 +1,9 @@
 <?php
 /**
- * Template name: all messages
+ * Template name: all messagesssss
  */
 
-if(get_current_user_id() != 113 AND !is_admin()) wp_redirect( get_bloginfo( 'url' ) );
+if(get_current_user_id() != 411251 AND !is_admin()) wp_redirect( get_bloginfo( 'url' ) );
 ?>
 <?php get_header(); ?>
 <form action="" method="POST">

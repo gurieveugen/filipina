@@ -60,7 +60,6 @@ class Notifications{
 				AND c.comment_karma = '0'
 				AND c.trash=0
 				AND c.draft=0
-				AND c.comment_owner = %d
 				AND c.comment_type = 'message' 
 				ORDER BY c.comment_date DESC", 
 				$this->db->comments, $id, $id
@@ -77,7 +76,7 @@ class Notifications{
 				$message->city    = '';
 				$message->url     = sprintf(
 					'%s/message/%d',
-					get_template_directory_uri(),
+					get_bloginfo('url'),
 					$message->user_id
 				);
 				array_push( $ids, intval( $message->comment_ID ) );

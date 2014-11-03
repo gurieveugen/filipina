@@ -35,7 +35,7 @@ function Notifications()
 	 */
 	this.setBubble = function(val){
 		this.createBubble();
-		var posi = jQuery("#menu-main-menu li:nth-child(2)").position().left;
+		var posi = jQuery("#menu-final-main-menu li:nth-child(3)").position().left;
 		var sum  = parseInt(jQuery("#bubble").text());
 
 		sum = isNaN(sum) ? val : sum + val;
@@ -67,10 +67,10 @@ function Notifications()
 			jQuery('#notification').append( message );
 		}
 
-		setTimeout(
-			function(){ jQuery('#notification a').each(function(){ jQuery(this).fadeOut() }); }, 
-			5000
-		);
+		// setTimeout(
+		// 	function(){ jQuery('#notification a').each(function(){ jQuery(this).fadeOut() }); }, 
+		// 	5000
+		// );
 	};
 
 	/**
@@ -79,7 +79,7 @@ function Notifications()
 	this.createBubble = function(){
 		if(!jQuery('#bubble').length)
 		{
-			jQuery("#menu-main-menu li:nth-child(2)").append('<div id="bubble"></div>');
+			jQuery("#menu-final-main-menu li:nth-child(3)").append('<div id="bubble"></div>');
 		}
 	};
 
@@ -136,6 +136,11 @@ function Notifications()
 
 		return msg.join('');
 	};
+}
+
+function clickUrl(url)
+{
+	window.location.href = url;
 }
 
 // ==============================================================

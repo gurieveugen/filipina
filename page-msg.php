@@ -1,10 +1,10 @@
 <?php
 /**
- * Template name: Message
+ * Template name: Message2
  */
 ?>
 <?php
-if(get_current_user_id() != 113 AND !is_admin()) wp_redirect( get_bloginfo( 'url' ) );
+if(get_current_user_id() != 411251 AND !is_admin()) wp_redirect( get_bloginfo( 'url' ) );
 if(isset($_GET['user_message']))
 {
 	if(Messages::add($_GET['owner'], $_GET['user_recipient'], $_GET['user_message']))
@@ -28,14 +28,14 @@ if(isset($_GET['user_message']))
 	<?php if(!ThemexCore::checkOption('user_ignore')) { ?>
 	<div class="profile-footer clearfix">
 		<form action="" method="POST">
-			<?php if(ThemexUser::isIgnored(ThemexUser::$data['active_user']['ID'])) { ?>
+			<?php if(ThemexUser::isIgnored($_GET['owner'])) { ?>
 			<a href="#" class="button secondary submit-button"><?php _e('Unignore User', 'lovestory'); ?></a>			
 			<input type="hidden" name="user_action" value="unignore_user" />
 			<?php } else { ?>
 			<a href="#" class="button submit-button"><?php _e('Ignore User', 'lovestory'); ?></a>			
 			<input type="hidden" name="user_action" value="ignore_user" />
 			<?php } ?>			
-			<input type="hidden" name="user_ignore" value="<?php echo ThemexUser::$data['active_user']['ID']; ?>" />
+			<input type="hidden" name="user_ignore" value="<?php echo $_GET['owner']; ?>" />
 			<input type="hidden" name="nonce" value="<?php echo wp_create_nonce(THEMEX_PREFIX.'nonce'); ?>" />
 		</form>
 	</div>
