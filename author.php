@@ -11,10 +11,11 @@
 		<?php
 		get_template_part('module', 'status');
 		echo ThemexUser::$data['active_user']['profile']['full_name'];
+		Notifications::viewProfile( ThemexUser::$data['active_user']['ID'] );
 		?>
 		</h2>
 	</div>
-	<table class="profile-fields">
+	<table class="profile-fields" data-test="asdf">
 		<tbody>	
 		<?php if(!ThemexCore::checkOption('user_gender')) { ?>
 			<?php if(!empty(ThemexUser::$data['active_user']['profile']['gender'])) { ?>

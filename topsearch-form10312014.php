@@ -34,12 +34,6 @@
 						));
 						?>
 					</div>
-                    <script type="text/javascript">
-						$(document).ready(function() {
-							$('#country').prepend('<option value="" selected="selected"> Select Country </option>');
-                            
-                        });
-					</script>
 					<!--<h5><?php _e('City', 'lovestory'); ?></h5>--></td>
 					<div class="select-field">
 						<span></span>
@@ -63,23 +57,20 @@
 			</div>
 			<div class="mw">
 				<div class="select-fields">
-					<span id="sel-age-group">Age</span>
+					<span id="sel-age-group">Age 18 to 31</span>
 				</div>
-				<div class="hidden-f-n-click" style="width:235px">
+				<div class="hidden-f-n-click">
 					<div class="select-field w50">
-							<span style="font-size:11px; width:55px;"></span>
+							<span></span>
 							<select id="age_from" name="age_from" style="opacity: 0;">
-                            	<option value="1">Age From</option>
 								<?php for($i=18;$i<=99;$i++){ echo '<option value="'. $i . '">' . $i . '</option>'; } ?>
 							</select>	
 					</div>	
 					&nbsp;&nbsp;to&nbsp;&nbsp;
 					<div class="select-field w50">
-							<span style="font-size:11px; width:55px;">Age To</span>	
+							<span></span>	
 							<select id="age_to" name="age_to" style="opacity: 0;">
-                            	<option value="100">Age To</option>
-								<?php //for($i=18;$i<=99;$i++){ echo '<option value="'. $i . '"'.($i==31? 'selected':'').'>' . $i . '</option>'; } ?>
-                                <?php for($i=18;$i<=99;$i++){ echo '<option value="'. $i . '">' . $i . '</option>'; } ?>
+								<?php for($i=18;$i<=99;$i++){ echo '<option value="'. $i . '"'.($i==31? 'selected':'').'>' . $i . '</option>'; } ?>
 							</select>	
 					</div>
 					<div class="btn-wrapper">
@@ -116,17 +107,14 @@
             </div>
 			</div>
         </div>
-		<div class="column eightcol last button-container">
-            <a href="#" class="button medium submit-button">
-                <span class="button-icon icon-search"></span><?php _e('Find My Matches', 'lovestory'); ?>
-            </a>
-        </div>
+				
+		<a href="#" class="button medium submit-button"><span class="button-icon icon-search"></span><?php _e('Find My Matches', 'lovestory'); ?></a>
 		<input type="hidden" name="s" value="" />
 	</form>
 </section>
 <section id="search-user">
     <form action="<?php echo SITE_URL.'/'.basename(get_permalink()).'/'; ?>" method="GET" >
-    	 <div class="column fourcol input-fields">
+    	 <div class="column fourcol">
         	<div class="field-wrap">
             	<input type="text" placeholder="First Name" id="firstname" name="firstname">
             </div>
@@ -135,23 +123,18 @@
             </div>
         	
         </div>
-        <div class="column fourcol input-fields last">
+        <div class="column fourcol last">
         	<div class="field-wrap">
             	<input type="text" id="username" name="username" value="" placeholder="Username">
             </div>                      
         </div>
-        <div class="clear"></div>
-        <div class="column eightcol last button-container">
-        	<a href="#" class="button medium submit-button">
-            	<span class="button-icon icon-search"></span><?php _e('Find Profile', 'lovestory'); ?>
-            </a>
-        </div>
+        <a href="#" class="button medium submit-button"><span class="button-icon icon-search"></span><?php _e('Find Profile', 'lovestory'); ?></a>
         <input type="hidden" name="s" value="" />
     </form>
 </section>
 <section id="search-advanced">
     <form action="<?php echo SITE_URL.'/'.basename(get_permalink()).'/'; ?>" method="GET" >
-        <div class="column fourcol input-fields">
+        <div class="column fourcol">
         	<div class="field-wrap">
             	<input type="text" placeholder="Height" id="height-in-cm" name="height-in-cm">
             </div>
@@ -160,7 +143,7 @@
             </div>
         	
         </div>
-        <div class="column fourcol input-fields last">
+        <div class="column fourcol last">
         	<div class="field-wrap">
             	<input type="text" id="wants-to-meet" name="wants-to-meet" value="" placeholder="Wants to meet">
             </div>
@@ -169,11 +152,7 @@
             </div>            
         </div>
         <div class="clear"></div>
-        <div class="button-container">
-        	<a href="#" class="button medium submit-button">
-            	<span class="button-icon icon-search"></span><?php _e('Find My Matches', 'lovestory'); ?>
-            </a>
-        </div>
+        <a href="#" class="button medium submit-button"><span class="button-icon icon-search"></span><?php _e('Find My Matches', 'lovestory'); ?></a>
         <input type="hidden" name="s" value="" />
     </form>
 </section>

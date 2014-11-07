@@ -4,7 +4,7 @@
 	<div class="section-title">
 		<h2><?php _e('My Membership', 'lovestory'); ?></h2>
 	</div>
-	<table class="profile-fields">
+	<table class="profile-fields" data-test="asdf">
 		<tbody>
 			<tr>
 				<th><?php _e('Membership', 'lovestory'); ?></th>

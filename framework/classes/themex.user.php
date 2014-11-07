@@ -159,6 +159,85 @@ class ThemexUser {
 				),
 			);
 		}
+		// NOEL MODIFICATION
+			/********** SEARCH BY NAME ****************/
+			//echo print_r($_GET);
+			if(isset($_GET['firstname']) && isset($_GET['lastname']) && $_GET['firstname']!='' && !empty($_GET['lastname'])):
+					$args['meta_query']=array(
+						array(
+							'key' => 'first_name',
+							'value' => sanitize_title($_GET['firstname']),
+							'compare' => '==',
+						),
+						array(
+								'key' => 'last_name',
+								'value' => sanitize_title($_GET['lastname']),
+								'compare' => '==',
+							),
+					);
+			
+			else:				
+					if(isset($_GET['firstname']) && !empty($_GET['firstname'])) {
+						$args['meta_query']=array(
+							array(
+								'key' => 'first_name',
+								'value' => sanitize_title($_GET['firstname']),
+								'compare' => '==',
+							),
+						);
+					}
+					if(isset($_GET['lastname']) && !empty($_GET['lastname'])) {
+						$args['meta_query']=array(
+							array(
+								'key' => 'last_name',
+								'value' => sanitize_title($_GET['lastname']),
+								'compare' => '==',
+							),
+						);
+					}
+			endif;
+			/********** END SEARCH BY NAME ****************/
+			/********** ADVANCED SEARCH ****************/
+			if(isset($_GET['description']) && $_GET['description']!='') {
+				//echo print_r($_GET);
+				$args['meta_query']=array(
+					array(
+						'key' => 'description',
+						'value' => sanitize_title($_GET['description']),
+						'compare' => '==',
+					),
+				);
+			}
+			if(isset($_GET['wants-to-meet']) && $_GET['wants-to-meet']!='') {
+				$args['meta_query']=array(
+					array(
+						'key' => '_'.THEMEX_PREFIX.'wants-to-meet',
+						'value' => sanitize_title($_GET['wants-to-meet']),
+						'compare' => '==',
+					),
+				);
+			}
+			if(isset($_GET['height-in-cm'])&& $_GET['height-in-cm']!='') {			
+				$args['meta_query']=array(
+					array(
+						'key' => '_'.THEMEX_PREFIX.'height-in-cm',
+						'value' => sanitize_title($_GET['height-in-cm']),
+						'compare' => '==',
+					),
+				);
+			}
+			if(isset($_GET['weight-in-kilos'])&& $_GET['weight-in-kilos']!='') {
+				$args['meta_query']=array(
+					array(
+						'key' => '_'.THEMEX_PREFIX.'weight-in-kilos',
+						'value' => sanitize_title($_GET['weight-in-kilos']),
+						'compare' => '==',
+					),
+				);
+			}	
+			//echo print_r($args);
+			/********** END ADVANCED SEARCH ****************/	
+		// END NOEL MODIFICATION
 		
 		if(self::isUserFilter()) {
 			if(isset($_GET['gender'])) {
@@ -952,7 +1031,7 @@ class ThemexUser {
 				'ID' => $user,
 				'date' => current_time('timestamp'),
 			));
-
+			Notifications::addFavorites( $user );
 			ThemexCore::updateUserMeta($ID, 'favorites', self::$data['user']['favorites']);
 		}		
 	}
@@ -1944,6 +2023,27 @@ class ThemexUser {
 				$query->query_from.=" LEFT JOIN {$wpdb->usermeta} m1 ON {$wpdb->users}.ID=m1.user_id AND (m1.meta_key='_".THEMEX_PREFIX."updated')"; 
 				$query->query_orderby=" ORDER BY m1.meta_value ".$order;
 			}
+		}
+		else
+		{
+			$order='ASC';
+			$order_value='';
+			/* noel mod */
+			if(isset($_GET['themex_user_order']) && !empty($_GET['themex_user_order'])):
+				switch($_GET['themex_user_order']){
+					case 'name':
+						$order_value='first_name';
+						break;
+					case 'status':
+						$order_value='status';
+						break;
+					default:
+						$order_value='_'.THEMEX_PREFIX.'updated';
+						break;
+				}		
+			$query->query_from.=" LEFT JOIN {$wpdb->usermeta} m1 ON {$wpdb->users}.ID=m1.user_id AND (m1.meta_key='".$order_value."')"; 
+			$query->query_orderby=" ORDER BY m1.meta_value ".$order;		
+			endif;
 		}
 	}
 	

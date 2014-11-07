@@ -402,11 +402,10 @@ class ThemexInterface {
 			//custom dropdown
 			case 'select':
 				$out.='<select id="'.$option['id'].'" name="'.$option['id'].'" '.$attributes.'>';
-				
 				if(isset($option['options'])) {
 					foreach($option['options'] as $name=>$title) {
 						$selected='';
-						if($name==$option['value'] || (is_array($option['value']) && in_array($name, $option['value']))) {
+						if($name===$option['value'] || (is_array($option['value']) && in_array($name, $option['value']))) {
 							$selected='selected="selected"';
 						}
 						

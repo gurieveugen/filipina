@@ -300,7 +300,7 @@ class ThemexCore {
 		if(is_user_logged_in()) {
 			session_id(str_replace('_', '-', THEMEX_PREFIX.'cache'));
 			session_name(str_replace('_', '-', THEMEX_PREFIX.'cache'));
-			session_start();
+			//session_start();
 		}		
 	}
 	

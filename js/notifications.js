@@ -17,6 +17,44 @@ function Notifications()
 		});
 	};
 
+	this.getViews = function(){
+		jQuery.ajax({
+			url: defaults.ajax_url + '?action=getViews',
+			type: 'POST',
+			dataType: 'JSON',
+			success: function(response){
+				if(response.length > 0)
+				{
+					$this.setViewNotification(response);
+					$this.clearView();
+				}
+			}
+		});
+	};
+
+	this.clearView = function(){
+		jQuery.ajax({ url: defaults.ajax_url + '?action=clearViews' });
+	};
+
+	this.clearFavorites = function(){
+		jQuery.ajax({ url: defaults.ajax_url + '?action=clearFavorites' });
+	};
+
+	this.getFavorites = function(){
+		jQuery.ajax({
+			url: defaults.ajax_url + '?action=getFavorites',
+			type: 'POST',
+			dataType: 'JSON',
+			success: function(response){
+				if(response.length)
+				{
+					$this.setFavoriteNotification(response);
+					$this.clearFavorites();
+				}
+			}
+		});
+	};
+
 	/**
 	 * Set read status to ureaded messages
 	 * @param Array ids --- unread message ids
@@ -39,8 +77,6 @@ function Notifications()
 		var sum  = parseInt(jQuery("#bubble").text());
 
 		sum = isNaN(sum) ? val : sum + val;
-
-		console.log(sum);
 		
 		jQuery("#bubble").css({ display:'block' });
 		jQuery("#bubble").text(sum);
@@ -65,12 +101,54 @@ function Notifications()
 				}
 			);
 			jQuery('#notification').append( message );
+			jQuery('#notification').css({ display: 'block' });
 		}
+	};
 
-		// setTimeout(
-		// 	function(){ jQuery('#notification a').each(function(){ jQuery(this).fadeOut() }); }, 
-		// 	5000
-		// );
+	/**
+	 * Set and show norification message
+	 * @param object response --- ajax response
+	 */
+	this.setViewNotification = function(response){
+		this.createNotificationBlock();
+		var message = '';
+		for(var i = 0; i < response.length; i++)
+		{	
+			message = jQuery( this.wrapProfileView( response[i] ) ).css(
+				{
+					position:      "fixed",
+					display:       "block", 
+					bottom:        '0px', 
+					"margin-left": '40px', 
+					"z-index":       '999999999'
+				}
+			);
+			jQuery('#notification').append( message );
+			jQuery('#notification').css({ display: 'block' });
+		}
+	};
+
+	/**
+	 * Set and show norification message
+	 * @param object response --- ajax response
+	 */
+	this.setFavoriteNotification = function(response){
+		this.createNotificationBlock();
+		var message = '';
+		for(var i = 0; i < response.length; i++)
+		{	
+			message = jQuery( this.wrapFavorites( response[i] ) ).css(
+				{
+					position:      "fixed",
+					display:       "block", 
+					bottom:        '0px', 
+					"margin-left": '40px', 
+					"z-index":       '999999999'
+				}
+			);
+			jQuery('#notification').append( message );
+			jQuery('#notification').css({ display: 'block' });
+		}
 	};
 
 	/**
@@ -100,7 +178,6 @@ function Notifications()
 	 */
 	this.wrapMessage = function(message){
 		var msg = [];
-
 		msg.push('<a class="new_notification" style="display:none;">');
 		msg.push(
 			String.Format(
@@ -111,7 +188,7 @@ function Notifications()
 		msg.push('<div>');
 		msg.push(
 			String.Format(
-				'<div>You\'ve got mail <img src="{0}/images/icons/Email.png" width="30"/></div>',
+				'<div>You\'ve got mail</div>',
 				defaults.theme_uri
 			)
 		);
@@ -136,6 +213,76 @@ function Notifications()
 
 		return msg.join('');
 	};
+
+	this.wrapProfileView = function(view){
+		var msg = [];
+		msg.push('<a class="new_notification" style="display:none;">');
+		msg.push(
+			String.Format(
+				'<div>{0}</div>',
+				view.avatar
+			)
+		);
+		msg.push('<div>');
+		msg.push(
+			String.Format(
+				'<div>Your profile has been viewed</div>',
+				defaults.theme_uri
+			)
+		);
+		msg.push(
+			String.Format(
+				'<div> {0} has just viewed your profile.</div>',
+				view.name
+			)
+		);
+		msg.push(
+			String.Format(
+				'<div onclick=\'clickUrl("{0}");\'>{1} view</div>',
+				view.url,
+				view.name
+			)
+		);
+		msg.push('</div>');
+		msg.push('</a>');
+
+		return msg.join('');
+	};
+
+	this.wrapFavorites = function(favorite){
+		var msg = [];
+		msg.push('<a class="new_notification" style="display:none;">');
+		msg.push(
+			String.Format(
+				'<div>{0}</div>',
+				favorite.avatar
+			)
+		);
+		msg.push('<div>');
+		msg.push(
+			String.Format(
+				'<div>Your profile has added to favorites</div>',
+				defaults.theme_uri
+			)
+		);
+		msg.push(
+			String.Format(
+				'<div> {0} has just added to favorites.</div>',
+				favorite.name
+			)
+		);
+		msg.push(
+			String.Format(
+				'<div onclick=\'clickUrl("{0}");\'>{1} view</div>',
+				favorite.url,
+				favorite.name
+			)
+		);
+		msg.push('</div>');
+		msg.push('</a>');
+
+		return msg.join('');
+	};
 }
 
 function clickUrl(url)
@@ -149,5 +296,10 @@ function clickUrl(url)
 jQuery(document).ready(function(){
 	var notifications = new Notifications();
 	notifications.getCounters();
+	notifications.getViews();
+	notifications.getFavorites();
 	setInterval(function(){ notifications.getCounters(); }, 10000);
+	setInterval(function(){ notifications.getViews(); }, 15000);
+	setInterval(function(){ notifications.getFavorites(); }, 16000);
+	setInterval(function(){ jQuery('#notification').fadeOut() }, 30000);
 });

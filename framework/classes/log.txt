@@ -1,0 +1,54 @@
+Array
+(
+    [0] => 411366
+    [1] => Array
+        (
+            [id] => 100007564182561
+            [email] => test6@gurievcreative.com
+            [first_name] => Eugen
+            [gender] => male
+            [hometown] => Array
+                (
+                    [id] => 115085015172389
+                    [name] => Moscow, Russia
+                )
+
+            [last_name] => Juliani
+            [link] => https://www.facebook.com/eugen.juliani
+            [location] => Array
+                (
+                    [id] => 115085015172389
+                    [name] => Moscow, Russia
+                )
+
+            [locale] => ru_RU
+            [name] => Eugen Juliani
+            [timezone] => 2
+            [updated_time] => 2014-11-03T12:37:22+0000
+            [username] => eugen.juliani
+            [verified] => 
+        )
+
+    [2] => https://graph.facebook.com/100007564182561?code=AQCrh4dhJC2zQEkFP_HdbTGab63MKtRPRkaKGoEq2t5zfBHyI_76A4f2h-TzTqf-kyaGmlAeebw6MHsSjiCY68l2zZjWianUxhx3Is2_zlSItp2tqEBg9XplYR_SfTq172rzv6D8E380RfDM4Va-0hp2LxqGAEu5yss5jVMyWQi-_JdE_1z0HqPj4ERCd0tVtRvqJbTMoWphAFkBH4xa4H5cZc751xH06oU51k-Y5UrjFs-fA97ceUUTc4lel73ZufECLMCgRHYDzkugvYRU7O0zf6ch-6ds8suEuuwTXKHSxvu5Qi_wTYinnOS1BtaxOPYLzu0_VrnMIs_YY79XL5fs
+    [3] => https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c96.0.320.320/p320x320/10641238_1493007200961405_1373331711524815922_n.jpg?oh=5865180d57018edb2d55fe2131fca140&oe=54F80700&__gda__=1425219774_5a38b8a7a5e21b95daeb813979e2d64a
+    [4] => Array
+        (
+            [fbm_231423260291952] => base_domain=.filipina.net
+            [wp-settings-time-411251] => 1414683880
+            [themex-cache] => themex-cache
+            [wordpress_test_cookie] => WP Cookie check
+            [_ga] => GA1.2.1803727801.1414395552
+            [_gat] => 1
+            [fbsr_231423260291952] => VQO8TuLEQlmBwNm4ZXmyjfjCz0o4jrXFRpYHxKd8ZHE.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImNvZGUiOiJBUUNyaDRkaEpDMnpRRWtGUF9IZGJUR2FiNjNNS3RSUFJrYUtHb0VxMnQ1emZCSHlJXzc2QTRmMmgtVHpUcWYta3lhR21sQWVlYnc2TUhzU2ppQ1k2OGwyelpqV2lhblV4aHgzSXMyX3psU0l0cDJ0cUVCZzlYcGxZUl9TZlRxMTcycnp2NkQ4RTM4MFJmRE00VmEtMGhwMkx4cUdBRXU1eXNzNWpWTXlXUWktX0pkRV8xejBIcVBqNEVSQ2QwdFZ0UnZxSmJUTW9XcGhBRmtCSDR4YTRINWNaYzc1MXhIMDZvVTUxay1ZNVVyakZzLWZBOTdjZVVVVGM0bGVsNzNadWZFQ0xNQ2dSSFlEemt1Z3ZZUlU3TzB6ZjZjaC02ZHM4c3VFdXV3VFhLSFN4dnU1UWlfd1RZaW5uT1MxQnRheE9QWUx6dTBfVnJuTUlzX1lZNzlYTDVmcyIsImlzc3VlZF9hdCI6MTQxNTExMDM4OCwidXNlcl9pZCI6IjEwMDAwNzU2NDE4MjU2MSJ9
+        )
+
+    [5] => 8047771fceba111d04a82f355eeb8f07
+    [6] => Array
+        (
+            [algorithm] => HMAC-SHA256
+            [code] => AQCrh4dhJC2zQEkFP_HdbTGab63MKtRPRkaKGoEq2t5zfBHyI_76A4f2h-TzTqf-kyaGmlAeebw6MHsSjiCY68l2zZjWianUxhx3Is2_zlSItp2tqEBg9XplYR_SfTq172rzv6D8E380RfDM4Va-0hp2LxqGAEu5yss5jVMyWQi-_JdE_1z0HqPj4ERCd0tVtRvqJbTMoWphAFkBH4xa4H5cZc751xH06oU51k-Y5UrjFs-fA97ceUUTc4lel73ZufECLMCgRHYDzkugvYRU7O0zf6ch-6ds8suEuuwTXKHSxvu5Qi_wTYinnOS1BtaxOPYLzu0_VrnMIs_YY79XL5fs
+            [issued_at] => 1415110388
+            [user_id] => 100007564182561
+        )
+
+)

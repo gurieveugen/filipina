@@ -5,7 +5,7 @@
 		<h2><?php _e('My Profile', 'lovestory'); ?></h2>
 	</div>
 	<form class="formatted-form" action="" method="POST">
-		<table class="profile-fields">
+		<table class="profile-fields" data-test="asdf">
 			<tbody>
 				<?php if(!ThemexCore::checkOption('user_name')) { ?>
 				<tr>

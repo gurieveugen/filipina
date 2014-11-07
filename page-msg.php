@@ -24,7 +24,7 @@ if(isset($_GET['user_message']))
 ?>
 <?php get_header(); ?>
 <aside class="message-preview column threecol <?php if(!ThemexCore::checkOption('user_ignore')) { ?>unbordered<?php } ?>">
-	<?php get_template_part('content', 'profile-grid'); ?>
+	<?php get_template_part('content', 'profile-grid-msg'); ?>
 	<?php if(!ThemexCore::checkOption('user_ignore')) { ?>
 	<div class="profile-footer clearfix">
 		<form action="" method="POST">

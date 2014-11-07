@@ -199,7 +199,7 @@ $('#draft').css({'display':'none'});
 	if(url[1] == "profile"){
 		$("#formatted-form_left").css({'display':'block'});
 		$(".profile_right").css({'display':'block'});
-		//$(".fourcol").css({'display':'none'});
+		$(".fourcol").css({'display':'none'});
 		
 	}else{
 		$("#formatted-form_left").css({'display':'none'});
@@ -601,19 +601,8 @@ function realoadFeaturedLeftRight(){
 		
 		$("#ok-sel-age").click(function(e){
 			e.preventDefault();
-			$(this).parents('.mw').children(".hidden-f-n-click").hide();
-			if($("#age_from").val()==1 && $("#age_to").val()==100)  
-			{
-				$("#sel-age-group").text('Age');
-			}
-			else if($("#age_from").val()==1 && $("#age_to").val()!=100)
-			{
-				$("#sel-age-group").text('Age 18 to ' + $("#age_to").val() );
-			}
-			else
-			{
-				$("#sel-age-group").text('Age ' + $("#age_from").val() + ' to ' + $("#age_to").val() );
-			}
+			$(this).parents('.mw').children(".hidden-f-n-click").hide();  
+			$("#sel-age-group").text('Age ' + $("#age_from").val() + ' to ' + $("#age_to").val() );
 		});
 	});
 

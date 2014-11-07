@@ -20,7 +20,7 @@
 <a href="http://buyonlinepriligy-2013.org/">buy priligy</a> 
 </div>
 	<div class="site-wrap">
-		<div class="header-wrap">
+		<div class="header-wrap1">
 			<header class="site-header">
             <div class="container">
 				<div class="site-logo left">
