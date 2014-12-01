@@ -42,12 +42,9 @@ function insert_wp_user($arr_data)
 		$reg_errors.='<li>You missed to put your description</li>';
 	else:		
 		$insert_wp_user=wp_create_user($arr_data['user_login'], $arr_data['user_password'],urldecode($arr_data['user_email']));	
-		//echo print_r((array)$insert_wp_user);		
 		if($insert_wp_user==NULL):
 			echo 'Error in saving profile';
 		elseif(is_object($insert_wp_user)):
-			$save_result=(array)$insert_wp_user;
-			//echo print_r($save_result);
 			foreach($insert_wp_user as $error):
 				//echo print_r($error);
 				if($error['empty_user_login'][0]!=''):				
@@ -57,7 +54,7 @@ function insert_wp_user($arr_data)
 				elseif($error['existing_user_email'][0]):
 					$reg_errors.='<li>'.$error['existing_user_email'][0].'</li>';
 				endif;
-			endforeach;				
+			endforeach;	
 		else:
 			$arr_data['description']=str_replace('+',' ',$arr_data['description']);
 			$arr_data['wants-to-meet']=str_replace('+',' ',$arr_data['wants-to-meet']);
@@ -69,8 +66,6 @@ function insert_wp_user($arr_data)
 		$reg_errors='<ul class="error" id="error-lists">'.$reg_errors.'</ul>';
 		echo $reg_errors;
 		_go_to_top();
-	else:
-		
 	endif;
 }
 function insert_wp_user_meta($arr_data,$wp_user_id)

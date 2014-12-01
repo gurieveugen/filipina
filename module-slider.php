@@ -14,9 +14,10 @@ if($query->have_posts()) {
              &nbsp;
                 <form action="<?php echo 'http://filipina.net/search-profiles' ?>" method="GET" >
               <div class="membership-box"> 
-               <div style=" border-bottom:#CCC solid 1px; text-align:center; height:50px;font-size:16px; color:#999; padding-bottom:3px;"><p style=" font-family:arial; font-size:26px; color:#b9b7b7; ">100% Free Site</p><br /><p style=" font-family:arial; font-size:24px; color:#b9b7b7; ">No Paid Membership</p></div>
+               <div style=" border-bottom:#CCC solid 1px; text-align:center; height:50px;font-size:16px; color:#999; padding-bottom:3px;">
+               <p style="font-family:arial; font-size:22px; color:#FFF; ">100% Free Site</p><br /><p style=" font-family:arial; font-size:20px; color:#FFF; ">No Paid Membership</p></div>
              <div style="margin-top:10px;padding-left:20px">
-              <span style="padding-left:50px; color:#999; height:25px; font-size:15px;"> I Am</span> <select style="
+              <span style="padding-left:50px; color:#FFF; height:25px; font-size:15px;"> I Am</span> <select style="
 height: 22px;
 font-size: 13px;
 padding: 0px; width:172px;" name=""> 
@@ -26,7 +27,7 @@ padding: 0px; width:172px;" name="">
               </select><!--<input type="text" name="" value="" style="height:4px; width:120px;" />-->
               
           
-               <span style="color:#999; font-size:15px;">Looking For </span><select style="height: 22px;
+               <span style="color:#FFF; font-size:15px;">Looking For </span><select style="height: 22px;
 font-size: 13px;
 padding: 0px; width:172px;" name="seeking"> 
               <option > </option>
@@ -35,7 +36,7 @@ padding: 0px; width:172px;" name="seeking">
               <option>ladyboy </option>
               </select> <!--<input type="text" name="" value="" style="height:4px; width:120px;" />-->
                
-               <span style="padding-left:60px; color:#999; font-size:15px;"> In &nbsp;</span>
+               <span style="padding-left:60px; color:#FFF; font-size:15px;"> In &nbsp;</span>
                <div class="mw" style="">
 				<div class="select-fields" style="width: 170px;background-color: white; font-size:13px; padding:0px;
 margin-left: 86px;
@@ -80,7 +81,7 @@ font-size: 12px">Country</span>
 					</div>
 				</div>
 			</div>
-               <a href="#" class="button medium submit-button search-btn" style="background-color:#f98722;margin:10px 60px 10px 0 !important;padding-left: 50px;" ><?php _e('Search', 'lovestory'); ?></a>
+               <a href="#" class="home-search-button"><?php _e('Search', 'lovestory'); ?></a>
                 <!--<input type="text" name="" value="" style="height:4px; width:120px;" />-->
               
                              <!-- <input type="submit" name="search" value="Search" style="margin-left:50px; font-family:Arial; font-size:25px; width:180px; background-color:#FF8000; border-radius:10px;height: 40px;
@@ -91,13 +92,24 @@ margin-top: 5px;" />-->
                <img src="wp-content/themes/lovestory/images/or2.png" />
                <?php if(ThemexFacebook::isActive()) { ?>
 		<a href="<?php echo home_url('?facebook_login=1'); ?>" 
-        	class="button1 facebook-login-button form-button facebook-btn" title="<?php _e('Sign in with Facebook', 'lovestory'); ?>" style="">
+        	class="button1 facebook-login-button form-button facebook-btn"
+            title="<?php _e('Sign in with Facebook', 'lovestory'); ?>" style="font-size: 9px;
+    height: 10px;
+    line-height: 9px;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align:top;">
 			<!--<span class="button-icon icon-facebook nomargin"></span>-->
-            <img src="wp-content/themes/lovestory/images/fb.jpg" />
+            <img src="wp-content/themes/lovestory/images/facebook-icon.png" />
 		</a>
 		<?php } ?>
               <!--<a href=""><img src="wp-content/themes/lovestory/images/fb.jpg" style="margin-left:15px;" /></a>-->
-              <span style="font-size:10px; color:#999; padding-left:30px;"> We will never publish anything on your timeline </span>
+              <span style=" color: #999;
+    display: inline-table;
+    font-size: 10px;
+    line-height: 7px;
+    text-align: center;
+    width: 100%;"> We will never publish anything on your timeline </span>
                
                </div>
                <input type="hidden" name="s" value="" />

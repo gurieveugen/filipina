@@ -1570,15 +1570,6 @@ li:last-child .listed-message {
 .message-mini-content h4 article:first-child{}
 .message-mini-content h4 article:last-child{text-align:right;}
 .message-mini-content section{padding:5px 15px; font-size:13px;}
-.messages-container-new{display:none;}
-.messages-container-new:first-child{display:block;}
-#messages-container.pagination span{cursor:pointer;}
-.message-moth-container nav.main-message-nav{ border-bottom: 1px solid #ff8c00;
-    margin-bottom: 10px;
-    padding: 15px 5px;
-    width: 100%;}
-.message-moth-container nav a{padding:10px 15px; color:#FFFFFF; background-color:#ff8c00; border-radius:5px 5px 0px 0px;}
-.message-moth-container nav a.active{background-color:#7fba00;}
 /*------------------------------- Image ---------------------------------*/
 
 .wp-caption,

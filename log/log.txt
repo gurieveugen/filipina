@@ -1,0 +1,59 @@
+Array
+(
+    [0] => 411334
+    [1] => Array
+        (
+            [id] => 100007564182561
+            [email] => test6@gurievcreative.com
+            [first_name] => Eugen
+            [gender] => male
+            [last_name] => Juliani
+            [link] => https://www.facebook.com/eugen.juliani
+            [location] => Array
+                (
+                    [id] => 115085015172389
+                    [name] => Moscow, Russia
+                )
+
+            [locale] => ru_RU
+            [name] => Eugen Juliani
+            [timezone] => 2
+            [updated_time] => 2014-11-03T08:09:07+0000
+            [username] => eugen.juliani
+            [verified] => 
+        )
+
+    [2] => https://graph.facebook.com/100007564182561?code=AQDbL1-gIrvuus_hPtLne0O8KT5fmmBSAh3L4b5xC3Ah3Awpf09ooRfIcVXEybdqEprqHCZzNRQUUkiWjXln2AkuALLNfEeHCB6BGDfaFRi9kSNkr_d37tlHicB7nsRfg4QY2UGy-MXRY261uVs9VItnLgOVtGr-eZk1r6fC6rfCwpA9x3xsK7iORo0Xpv8bTNPLxJgjynd-ENbSbqg_PoEm2QsQVSowhSXHDbKoQLmNBf0rhydXBN2tvFZDoz2zWzPl9_9BrnJn7aH8R8T_Pb7ca7EJeXfp126bR_7gaYzJPwHdaVJ6NAlJhzaZurOfpQoYm5xBU180jxff3mgBkzoJ
+    [3] => Array
+        (
+            [headers] => Array
+                (
+                    [www-authenticate] => OAuth "Facebook Platform" "invalid_request" "Unsupported get request. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api"
+                    [facebook-api-version] => v1.0
+                    [content-type] => application/json; charset=UTF-8
+                    [pragma] => no-cache
+                    [access-control-allow-origin] => *
+                    [x-fb-rev] => 1477653
+                    [cache-control] => no-store
+                    [expires] => Sat, 01 Jan 2000 00:00:00 GMT
+                    [x-fb-debug] => h+qjlvVWMa8AYOU46VtDTpHz+MKuqLnm3STNvK3125KdkoZep+33i1/lAbCoGH315sM1xtrZuw63AgWtSYWKkA==
+                    [date] => Mon, 03 Nov 2014 10:41:51 GMT
+                    [connection] => close
+                    [content-length] => 183
+                )
+
+            [body] => {"error":{"message":"Unsupported get request. Please read the Graph API documentation at https:\/\/developers.facebook.com\/docs\/graph-api","type":"GraphMethodException","code":100}}
+            [response] => Array
+                (
+                    [code] => 400
+                    [message] => Bad Request
+                )
+
+            [cookies] => Array
+                (
+                )
+
+            [filename] => 
+        )
+
+)

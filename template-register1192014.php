@@ -15,7 +15,7 @@ Template Name: Registration
 <?php endif;?>
 <div class="clear"></div>
 <?php if(get_option('users_can_register')) { ?>
-<div class="column eightcolt registration-form">
+<div class="column eightcolt">
     <div class="sub-title">
     	<h2><?php _e('<b>100% Free site </b><br>(You might decide to pay only for added visibility)!','lovestory'); ?></h2>
         <div class="facebook-login-area">
@@ -78,8 +78,8 @@ Template Name: Registration
         <div class="clear"></div>
         <?php if(!ThemexCore::checkOption('user_gender')):?>
             <div class="column fourcol">
-                <div class="field-wrap select-content">
-                <label><?php _e('My Gender is', 'lovestory'); ?></label>
+                <div class="field-wrap">
+                <?php _e('My Gender is', 'lovestory'); ?>
                     <div class="select-field">
                         <span></span>
                         <?php 
@@ -96,8 +96,8 @@ Template Name: Registration
             </div>
         <?php endif;?>
         <div class="column fourcol">
-            <div class="field-wrap select-content">
-            	<label><?php _e('I am seeking a ', 'lovestory'); ?></label>
+            <div class="field-wrap">
+            	<?php _e('I am seeking a ', 'lovestory'); ?>
                 <div class="select-field">
                     <span></span>
                     <?php 
@@ -123,8 +123,8 @@ Template Name: Registration
         </div>
         <?php if(!ThemexCore::checkOption('user_age')):?>
         <div class="column fourcol last">
-            <div class="field-wrap select-content">
-            	<label><?php _e('My age is', 'lovestory'); ?></label>
+            <div class="field-wrap">
+            	<?php _e('My age is', 'lovestory'); ?>
                 <div class="select-field">
                     <span></span>
                     <?php 
@@ -142,13 +142,9 @@ Template Name: Registration
         <div class="clear"></div>
         <?php if(!ThemexCore::checkOption('user_location')):?>
             <div class="column sixcol">
-            <div class="field-wrap select-content">
-                <label><?php _e('Country', 'lovestory'); ?></label>
-                <div class="select-field mw" id="select-country">
-                <div class="select-fields">
-					<span id="sel-country-group"> Select Country </span>
-				</div>
-                <div class="hidden-f-n-click">
+            <div class="field-wrap">
+                <?php _e('Country', 'lovestory'); ?>
+                <div class="select-field">
                     <span></span>
 					<?php 
                     echo ThemexInterface::renderOption(array(
@@ -160,50 +156,31 @@ Template Name: Registration
                     ));
                     ?>
                 </div>
-                </div>
             </div>
             </div>
             <div class="column sixcol last">
-                <div class="field-wrap select-content" id="raw-cities">
-                	<label><?php _e('City', 'lovestory'); ?></label>
-                    <input type="hidden" name="city" id="city" size="50" value="" placeholder="Enter your City"/>   
-                    <!--<h5><?php _e('City', 'lovestory'); ?></h5>--></td>
-					<div class="select-field" id="select-city">
-						<span></span>
-						<?php 
-						echo ThemexInterface::renderOption(array(
-							'id' => 'city-select',
-							'type' => 'select_city',
-							'value' => isset($_GET['city'])?$_GET['city']:'City',
-							'attributes' => array(
-								'class' => 'filterable-list',
-								'data-filter' => 'countries-list',
-							),
-							'wrap' => false,
-						));
-						?>
-					</div>             
+                <div class="field-wrap">
+                    <?php _e('City', 'lovestory'); ?>
+                    <input type="text" name="city" size="50" value="" />                
                 </div>
             </div>
         <?php endif;?>
         <div class="clear"></div>
         <div class="column sixcol">       
-        	<div class="field-wrap"> 
-            <label><?php _e('Height', 'lovestory'); ?></label>          
+        	<div class="field-wrap">             
             <input type="text" name="height-in-cm" id="height-in-cm" placeholder="<?php _e('Height', 'lovestory'); ?>">
             </div>
         </div>
         <div class="column sixcol last">       
-        	<div class="field-wrap">    
-            <label><?php _e('Weight', 'lovestory'); ?></label>           
+        	<div class="field-wrap">             
             	<input type="text" name="weight-in-kilos" id="weight-in-kilos" 
                 placeholder="<?php _e('Weight', 'lovestory'); ?>" required="required">
             </div>
         </div>
         <div class="clear"></div>        
         <div class="column sixcol">       
-        	<div class="field-wrap">             
-             <label><?php _e('Wants to meet', 'lovestory'); ?></label>  
+        	<div class="field-wrap">
+             <?php _e('Wants to meet', 'lovestory'); ?>
            	 <input type="text" value="" name="wants-to-meet" id="wants-to-meet">
            </div>
         </div>

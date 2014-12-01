@@ -225,9 +225,7 @@ $('#draft').css({'display':'none'});
 	$(window).resize(function(){
 		  methodToFixLayout(85);
 	});
-	$('.header-register-button').click(function(){
-		ga('send', 'event', 'button', 'click');
-	});
+
 });
 
 function getQueryParam(param) {
@@ -564,50 +562,21 @@ function realoadFeaturedLeftRight(){
 
 (function($){ 
 	$(document).ready( function(){
-		//$('select[name="city"]').children('option').eq(0).attr('selected','true').text('City');
-		//$('select[name="seeking"]').children('option').eq(0).attr('selected','true').text('I am seeking a');
+		$('select[name="city"]').children('option').eq(0).attr('selected','true').text('City');
+		$('select[name="seeking"]').children('option').eq(0).attr('selected','true').text('I am seeking a');
 		$("#sel-country-group").text("Country");
 		
 		$("#sel-age-group,#sel-country-group").click( function(e){
 			$(".hidden-f-n-click").hide();
 			$(this).parents(".mw").children(".hidden-f-n-click").toggle();
 		});
-		$('#select-country select').change(function(e) {
-			var new_city_list='';
-			var this_class=$('#select-country select').val();
-            $(this).parents(".mw").children(".hidden-f-n-click").toggle();
-			$('#select-city select').parents(".mw").children(".hidden-f-n-click").toggle();
-			$('#raw-cities.field-wrap').children('select').removeAttr('disabled');	
-			$('#select-city select').removeAttr('disabled');		
-				$('#raw-cities.field-wrap select option').each(function() { 
-				  if($(this).hasClass(this_class)==true)
-				   {               
-						new_city_list=new_city_list + '<option class="'+this_class+'" value="'+ $(this).val() +'">'+$(this).html()+'</option>';						
-				  }
-				});	
-				if(new_city_list!='')
-				{						
-					$('#city').attr('type','hidden');
-					$('#select-city').css('display','block');
-					$('#select-city select').html(new_city_list);
-					$('#select-city select').change(function() {
-                        $('#city').val($(this).val());
-                    });
-				}
-				else
-				{
-					$('#city').val('');
-					$('#city').attr('type','text');
-					$('#select-city').css('display','none');					
-				}
-        });
+
 		
 		var top_of_ctr = new Array();
 		$("#country").children('option').each( function(){
-			var sel = ''; if( $(this).attr('selected') == 'selected' ){ sel = ' selected="selected"'; }
-			if( $(this).text() == 'Philippines' ){ $(this).remove(); top_of_ctr[0] = "<option value='PH'"+sel+">Philippines</option>"; }
-			if( $(this).text() == 'United States' ){ $(this).remove(); top_of_ctr[1] = "<option value='US'"+sel+">United States</option>"; }
-			if( $(this).text() == 'Australia' ){ $(this).remove(); top_of_ctr[2] = "<option value='AU'"+sel+">Australia</option>"; }
+			if( $(this).text() == 'United States' ){ $(this).remove(); top_of_ctr[0] = "<option value='US'>United States</option>";}
+			if( $(this).text() == 'Philippines' ){  $(this).remove(); top_of_ctr[1] = "<option value='PH'>Philippines</option>";}
+			if( $(this).text() == 'Australia' ){  $(this).remove(); top_of_ctr[2] = "<option value='AU'>Australia</option>";}
 		});
 		
 		$("#country").prepend('<optgroup label="_________"><optgroup>');
@@ -615,11 +584,13 @@ function realoadFeaturedLeftRight(){
 			$("#country").prepend( top_of_ctr[ i ] );
 		}
 		$("#country").parent().children('span').text('US');
-		//$("#country").children('option').eq(0).attr('selected',true);
+		$("#country").children('option').eq(0).attr('selected',true);
 		check_country();
-		$("#country").change(function(){                      
-				   check_country();                     
-		});
+             $("#country").change(function(){
+                      
+                           check_country();
+                     
+               });
 		
 		$("#ok-sel-country").click(function(e){
 			e.preventDefault();
@@ -649,8 +620,7 @@ function realoadFeaturedLeftRight(){
 function check_country(){
  setTimeout( function(){
 	if( $('select[name="city"]').children('option').length > 0 )     $('select[name="city"]').parent('.select-field').eq(0).show();
-	else $('select[name="city"]').parent('.select-field').eq(0).hide();	
-	
+	else $('select[name="city"]').parent('.select-field').eq(0).hide();
  },1000);
 }  
 })(jQuery); 

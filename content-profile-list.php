@@ -5,6 +5,6 @@
 	</div>
 	<div class="profile-text">
 		<h4><?php get_template_part('module', 'status'); ?><a href="<?php echo ThemexUser::$data['active_user']['profile_url']; ?>"><?php echo ThemexUser::$data['active_user']['profile']['full_name']; ?></a></h4>
-		<?php echo themex_sections(wpautop(ThemexUser::$data['active_user']['profile']['description']), 1); ?>
+		<?php echo themex_sections(wpautop(str_replace('+', ' ', ThemexUser::$data['active_user']['profile']['description'])), 1); ?>
 	</div>
 </article>

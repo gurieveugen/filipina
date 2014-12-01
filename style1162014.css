@@ -380,8 +380,7 @@ ul.success li:before {
 ul.error li:before {
 	top:8px;
 	content: "\f00d";
-        left:5px;
-	color:#FFF;
+        left:3px;
 }
 
 ul.success,
@@ -491,28 +490,13 @@ ul.error {
 	background:#000;
 }
 .slider-container{ background:url(images/Untitled-4.jpg) center top no-repeat; margin-left:-388px; height:488px;}
-.membership-box{
-margin-left:895px;width:280px;
-background-color:#131313;
-color:white;bottom:0;padding-left:10px;padding-top:10px;padding-bottom:10px;font-size:16px; margin-top:36px; position:relative;padding-right:10px;}
+.membership-box{margin-left:895px;width:280px;background-color:black;color:white;bottom:0;padding-left:10px;padding-top:10px;padding-bottom:10px;font-size:16px; margin-top:67px; position:relative;padding-right:10px;}
 .dropdown-country{
   margin-left: 54px !important;
   margin-top: 133px !important;
   width: 200px; 
 }
-.home-search-button{
-	background-color: #ffa501;
-    border-radius: 40px;
-    color: #fff;
-    display: inline-table;
-    font-size: 22px;
-    margin: 19px 60px 10px 7px !important;
-    padding: 10px 15px;
-    text-align: center;
-    width: 199px;
-	}
-.home-search-button:hover{background-color:#fa8c1c; color:#fff; text-shadow:0 1px 1px #fa8c1c}
-.facebook-btn{padding-right: 40px; margin:10px 0 !important;}
+.facebook-btn{padding-right: 40px; background: #000 !important; margin:10px 0 !important;}
 .search-btn{background-color: orange; margin-left:50px; margin:10px 0px 10px 0 !important; width:100px; float:right;}
 
 /* ========================== CUSTOM ELEMENTS ========================= */
@@ -890,12 +874,6 @@ p > .button.large {
 .facebook-login-button {
 	padding-left:0.9em;
 	padding-right:0.9em;
-	
-	background: none repeat scroll 0 0 transparent;
-    border: medium none;
-    box-shadow: none;
-    padding-left: 0.9em;
-    padding-right: 0.9em;
 }
 
 /*--------------------------------- Title --------------------------------*/
@@ -1253,9 +1231,9 @@ p > .button.large {
 	margin-top:0.25em;
 }
 
-/*.message-preview .profile-text p {
+.message-preview .profile-text p {
 	display:none;
-}*/
+}
 
 .profile-options {
 	border-top:1px solid #dfdfdf;
@@ -1336,10 +1314,6 @@ p > .button.large {
 
 .featured-profile .profile-text {
 	padding-left:15px;
-}
-.featured-profile .profile-text p {
-	overflow:hidden;
-	width:190px;
 }
 
 .featured-profile .profile-option {
@@ -1531,8 +1505,6 @@ p > .button.large {
 
 .listed-message {
 	padding:0.5em 0;
-	display:inline-block;
-	width:100%;
 }
 
 li:first-child .listed-message {
@@ -1563,22 +1535,7 @@ li:last-child .listed-message {
 	float:left;
 	color:#888;
 }
-.message-mini-content h4{display:inline-table; width:100%;}
-.message-mini-content h4 article{width:50%;float:left; font-size:12px; text-transform:capitalize;}
-.message-mini-content h4 article img{vertical-align:top;}
-.message-mini-content h4 article aside{padding:3px 20px;}
-.message-mini-content h4 article:first-child{}
-.message-mini-content h4 article:last-child{text-align:right;}
-.message-mini-content section{padding:5px 15px; font-size:13px;}
-.messages-container-new{display:none;}
-.messages-container-new:first-child{display:block;}
-#messages-container.pagination span{cursor:pointer;}
-.message-moth-container nav.main-message-nav{ border-bottom: 1px solid #ff8c00;
-    margin-bottom: 10px;
-    padding: 15px 5px;
-    width: 100%;}
-.message-moth-container nav a{padding:10px 15px; color:#FFFFFF; background-color:#ff8c00; border-radius:5px 5px 0px 0px;}
-.message-moth-container nav a.active{background-color:#7fba00;}
+
 /*------------------------------- Image ---------------------------------*/
 
 .wp-caption,
@@ -2027,14 +1984,7 @@ li:last-child .listed-message {
 .formatted-form .form-submit input {
 	margin-bottom:0;
 }
-.registration-form .field-wrap{margin:5px 0px;}
-.registration-form .select-content{padding-right:0;}
-.registration-form .select-content label{font-size:12px; padding:5px 0px;}
-.registration-form .select-fields, .registration-form .select-field{width:100%; padding:2px 0;}
-.registration-form .hidden-f-n-click{padding:0px; width:100%;}
-.registration-form .mw{border:none;}
-.registration-form input, .registration-form select,.registration-form textarea, .registration-form .select-field{border-radius:0px;}
-.registration-form input, .registration-form select, .registration-form textarea{width:98% !important; padding:10px;}
+
 /*------------------------------- Stories -------------------------------*/
 
 .stories-listing {

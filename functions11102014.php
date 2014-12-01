@@ -10,7 +10,6 @@ define('THEME_URI', get_template_directory_uri().'/');
 define('CHILD_URI', get_stylesheet_directory_uri().'/');
 define('THEMEX_PATH', THEME_PATH.'framework/');
 define('THEMEX_URI', THEME_URI.'framework/');
-define('AJAX_URL_ADD_PROFILE', THEME_URI.'framework/add-new-profile.php');
 define('THEMEX_PREFIX', 'themex_');
 
 //Set content width

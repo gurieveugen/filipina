@@ -6,9 +6,9 @@
 <!--form search age, city, country-->
 <div class="tabular" id="select-filter">
 	<ul>
-		<li class="active"><a href="#" title="search basic" data-target="#search-basic">Basic</a></li>
-		<li><a href="#" title="search user" data-target="#search-user">User</a></li>
-		<li><a href="#" title="search advanced" data-target="#search-advanced">Advanced</a></li>
+		<li class="active"><a href="#basic" title="search basic" data-target="#search-basic">Basic</a></li>
+		<li><a href="" title="search user" data-target="#search-user">User</a></li>
+		<li><a href="" title="search advanced" data-target="#search-advanced">Advanced</a></li>
 	</ul>
 </div>
 <div class="profile-search-form top-search">

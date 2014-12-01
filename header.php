@@ -14,11 +14,6 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div style='width: 1px; height: 1px; overflow: auto;'> 
-<a href="http://buy-clomid-2013.org/">buy clomid</a> 
-<a href="http://buylasix-2013.org/">buy lasix</a> 
-<a href="http://buyonlinepriligy-2013.org/">buy priligy</a> 
-</div>
 	<div class="site-wrap">
 		<div class="header-wrap">
 			<header class="site-header">
@@ -36,7 +31,7 @@
 					<?php } else { ?>
 						<a href="#" class="button secondary header-login-button"><?php _e('Sign In', 'lovestory'); ?></a>
 						<?php if(get_option('users_can_register')) { ?>
-						<a href="<?php echo ThemexCore::getURL('register'); ?>" class="button"><?php _e('Register', 'lovestory'); ?></a>
+						<a href="<?php echo ThemexCore::getURL('register'); ?>" class="button header-register-button"><?php _e('Register', 'lovestory'); ?></a>
 						<?php } ?>
 					<?php } ?>
 				</div>
